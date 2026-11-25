@@ -25,9 +25,11 @@
 
 ## ダウンロードとインストール
 
-1. [GitHub Releases](https://github.com/badugisoft/poppage/releases/latest) から署名・公証済みの最新 `.dmg` または `.zip` をダウンロードします。
+1. [GitHub Releases](https://github.com/badugisoft/poppage/releases/latest) から署名・公証済みの最新 `.dmg` または `.zip`（Apple Silicon）をダウンロードします。
 2. `.dmg` を開く（または `.zip` を展開する）し、**PopPage.app** を `/Applications` へドラッグします。
 3. アプリケーションフォルダまたは Spotlight から **PopPage** を起動します。
+
+> Intel（`x86_64`）Mac 向けのビルド済みバイナリは配布していないため、必要な場合は[ソースからビルド](#ソースからビルド)してください。
 
 ## 主な機能
 

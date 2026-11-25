@@ -25,9 +25,11 @@ Diese App wurde **zu 100 % mit Antigravity entwickelt**.
 
 ## Download & Installation
 
-1. Lade die neueste signierte und notarisierte `.dmg`- oder `.zip`-Datei von [GitHub Releases](https://github.com/badugisoft/poppage/releases/latest) herunter.
+1. Lade die neueste signierte und notarisierte `.dmg`- oder `.zip`-Datei (Apple Silicon) von [GitHub Releases](https://github.com/badugisoft/poppage/releases/latest) herunter.
 2. Öffne die `.dmg` (oder entpacke die `.zip`) und ziehe **PopPage.app** in `/Applications`.
 3. Starte **PopPage** über Programme oder Spotlight.
+
+> Vorgefertigte Builds enthalten kein Intel (`x86_64`); bei Bedarf bitte [aus dem Quellcode bauen](#aus-dem-quellcode-bauen).
 
 ## Funktionen
 

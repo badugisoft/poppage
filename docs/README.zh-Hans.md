@@ -25,9 +25,11 @@
 
 ## 下载与安装
 
-1. 从 [GitHub Releases](https://github.com/badugisoft/poppage/releases/latest) 下载经过签名和公证的最新 `.dmg` 或 `.zip` 安装包。
+1. 从 [GitHub Releases](https://github.com/badugisoft/poppage/releases/latest) 下载经过签名和公证的最新 `.dmg` 或 `.zip` 安装包（Apple Silicon）。
 2. 打开 `.dmg`（或解压 `.zip`），将 **PopPage.app** 拖入 `/Applications` 文件夹。
 3. 从应用程序或聚焦搜索启动 **PopPage**。
+
+> 预构建安装包不包含 Intel（`x86_64`）版本；如需使用，请[从源码构建](#从源码构建)。
 
 ## 主要功能
 

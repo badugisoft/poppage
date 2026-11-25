@@ -58,4 +58,4 @@ git push origin main
 git tag -a "vX.Y.Z" -m "Release vX.Y.Z"
 git push origin "vX.Y.Z"
 ```
-GitHub Actions (`.github/workflows/release.yml`) will automatically build a universal `.app`, codesign, notarize, package `.dmg` and `.zip`, extract notes + compare link from `CHANGELOG.md`, and publish the GitHub Release.
+GitHub Actions (`.github/workflows/release.yml`) will automatically build an Apple Silicon `.app`, codesign, notarize, package `.dmg` and `.zip`, extract notes + compare link from `CHANGELOG.md`, and publish the GitHub Release.

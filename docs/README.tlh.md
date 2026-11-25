@@ -25,9 +25,11 @@ janvam **100% Antigravity lo'ta'bogh chenmoHlu'**.
 
 ## qem & lan
 
-1. [GitHub Releases](https://github.com/badugisoft/poppage/releases/latest)vo' `.dmg` pagh `.zip` teywI' qem.
+1. [GitHub Releases](https://github.com/badugisoft/poppage/releases/latest)vo' `.dmg` pagh `.zip` teywI' (Apple Silicon) qem.
 2. `.dmg` poSmoH 'ej `/Applications`Daq **PopPage.app** lan.
 3. **PopPage** tagh.
+
+> Intel (`x86_64`) teywI' tu'lu'be'; poQchugh, [chenmoH](#chenmoh-lan--tagh).
 
 ## laHmey
 
