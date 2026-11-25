@@ -1,0 +1,161 @@
+name: Release PopPage
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-14
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate plist and localization strings
+        run: make lint
+
+      - name: Set version variables
+        id: version
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          VERSION="${TAG#v}"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Import Apple Developer ID certificate
+        env:
+          MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
+          MACOS_CERTIFICATE_PWD: ${{ secrets.MACOS_CERTIFICATE_PWD }}
+        run: |
+          KEYCHAIN_PATH="$RUNNER_TEMP/build.keychain-db"
+          KEYCHAIN_PASS="$(openssl rand -hex 16)"
+          CERT_PATH="$RUNNER_TEMP/certificate.p12"
+
+          echo "$MACOS_CERTIFICATE" | base64 --decode > "$CERT_PATH"
+          security create-keychain -p "$KEYCHAIN_PASS" "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASS" "$KEYCHAIN_PATH"
+          security import "$CERT_PATH" -P "$MACOS_CERTIFICATE_PWD" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASS" "$KEYCHAIN_PATH"
+          security list-keychain -d user -s "$KEYCHAIN_PATH"
+          rm -f "$CERT_PATH"
+
+      - name: Build universal release .app
+        run: |
+          swift build -c release --arch arm64 --arch x86_64
+          BIN_PATH=".build/apple/Products/Release/PopPage"
+          if [ ! -f "$BIN_PATH" ]; then
+            BIN_PATH=".build/release/PopPage"
+          fi
+
+          APP_DIR="build/PopPage.app"
+          rm -rf "$APP_DIR"
+          mkdir -p "$APP_DIR/Contents/MacOS" "$APP_DIR/Contents/Resources"
+          cp "$BIN_PATH" "$APP_DIR/Contents/MacOS/PopPage"
+          cp "Resources/Info.plist" "$APP_DIR/Contents/Info.plist"
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${{ steps.version.outputs.version }}" "$APP_DIR/Contents/Info.plist"
+          cp "Resources/AppIcon.icns" "$APP_DIR/Contents/Resources/AppIcon.icns"
+          cp -R Resources/Localization/*.lproj "$APP_DIR/Contents/Resources/"
+
+      - name: Sign PopPage.app
+        env:
+          MACOS_SIGN_IDENTITY: ${{ secrets.MACOS_SIGN_IDENTITY }}
+        run: |
+          codesign --force --deep --options runtime --timestamp --sign "$MACOS_SIGN_IDENTITY" "build/PopPage.app"
+          codesign --verify --deep --strict --verbose=2 "build/PopPage.app"
+
+      - name: Notarize and staple PopPage.app
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+        run: |
+          mkdir -p dist
+          ditto -c -k --keepParent "build/PopPage.app" "dist/PopPage-notarize.zip"
+          xcrun notarytool submit "dist/PopPage-notarize.zip" \
+            --apple-id "$APPLE_ID" \
+            --team-id "$APPLE_TEAM_ID" \
+            --password "$APPLE_APP_PASSWORD" \
+            --wait
+          xcrun stapler staple "build/PopPage.app"
+          rm -f "dist/PopPage-notarize.zip"
+
+      - name: Package .zip and .dmg
+        env:
+          MACOS_SIGN_IDENTITY: ${{ secrets.MACOS_SIGN_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          ZIP_PATH="dist/PopPage-${VERSION}-macOS.zip"
+          DMG_PATH="dist/PopPage-${VERSION}-macOS.dmg"
+
+          ditto -c -k --keepParent "build/PopPage.app" "$ZIP_PATH"
+
+          DMG_STAGE="$RUNNER_TEMP/dmg-stage"
+          rm -rf "$DMG_STAGE"
+          mkdir -p "$DMG_STAGE"
+          cp -R "build/PopPage.app" "$DMG_STAGE/"
+          ln -s /Applications "$DMG_STAGE/Applications"
+          hdiutil create -volname "PopPage" -srcfolder "$DMG_STAGE" -ov -format UDZO "$DMG_PATH"
+
+          codesign --force --timestamp --sign "$MACOS_SIGN_IDENTITY" "$DMG_PATH"
+          xcrun notarytool submit "$DMG_PATH" \
+            --apple-id "$APPLE_ID" \
+            --team-id "$APPLE_TEAM_ID" \
+            --password "$APPLE_APP_PASSWORD" \
+            --wait
+          xcrun stapler staple "$DMG_PATH"
+
+          (cd dist && shasum -a 256 *.zip *.dmg > SHA256SUMS.txt)
+
+      - name: Generate release notes from CHANGELOG.md
+        run: |
+          python3 - "${{ steps.version.outputs.tag }}" "${{ steps.version.outputs.version }}" "${{ github.repository }}" <<'PY' > dist/release_notes.md
+          import re, subprocess, sys
+
+          tag, version, repo = sys.argv[1], sys.argv[2], sys.argv[3]
+          with open("CHANGELOG.md", encoding="utf-8") as f:
+              text = f.read()
+
+          pattern = rf"^## \[{re.escape(version)}\][^\n]*\n(.*?)(?=^## \[|\Z)"
+          m = re.search(pattern, text, re.M | re.S)
+          notes = m.group(1).strip() if m else f"Release {tag}"
+
+          tags_raw = subprocess.check_output(["git", "tag", "--sort=-v:refname"], text=True).splitlines()
+          prev_tag = next((t for t in tags_raw if t != tag), None)
+
+          if prev_tag:
+              compare_url = f"https://github.com/{repo}/compare/{prev_tag}...{tag}"
+              compare_line = f"**Full Changelog**: [{prev_tag}...{tag}]({compare_url})"
+          else:
+              compare_url = f"https://github.com/{repo}/commits/{tag}"
+              compare_line = f"**Full Changelog**: [{tag}]({compare_url})"
+
+          print(f"{notes}\n\n---\n\n{compare_line}")
+          PY
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          TAG="${{ steps.version.outputs.tag }}"
+          gh release create "$TAG" \
+            "dist/PopPage-${VERSION}-macOS.dmg" \
+            "dist/PopPage-${VERSION}-macOS.zip" \
+            "dist/SHA256SUMS.txt" \
+            --title "PopPage ${TAG}" \
+            --notes-file "dist/release_notes.md"
+
+      - name: Clean up keychain
+        if: always()
+        run: |
+          security delete-keychain "$RUNNER_TEMP/build.keychain-db" 2>/dev/null || true

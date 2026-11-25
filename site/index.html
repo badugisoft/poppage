@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PopPage — Pin Websites to Your macOS Menu Bar</title>
+  <meta name="description" content="A lightweight, free macOS 14+ menu bar app written in Swift for pinning websites and opening them quickly in a popover." />
+  <link rel="icon" type="image/png" href="images/app-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">
+        <img src="images/app-icon.png" alt="PopPage icon" width="28" height="28" />
+        <span>PopPage</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#shortcuts" data-i18n="nav.shortcuts">Shortcuts</a>
+        <a href="https://github.com/badugisoft/poppage" target="_blank" rel="noopener">GitHub</a>
+        <label class="sr-only" for="lang-select" data-i18n="nav.language">Language</label>
+        <select id="lang-select" class="lang-select" aria-label="Language">
+          <option value="en">English</option>
+          <option value="ko">한국어</option>
+          <option value="zh-Hans">简体中文</option>
+          <option value="ja">日本語</option>
+          <option value="es">Español</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+          <option value="tlh">tlhIngan Hol</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <img class="hero-icon" src="images/app-icon.png" alt="PopPage App Icon" width="96" height="96" />
+        <p class="eyebrow" data-i18n="hero.eyebrow">macOS 14+ · Native Swift · Free &amp; Open Source</p>
+        <h1 data-i18n="hero.title">Pin any website to your macOS menu bar.</h1>
+        <p class="hero-sub" data-i18n="hero.subtitle">
+          A lightweight native menu bar browser focused on essentials—custom icons, navigation policies, custom HTTP headers, adaptive toolbar, and zero bloat.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/badugisoft/poppage/releases/latest" target="_blank" rel="noopener" data-i18n="hero.download">
+            Download for macOS
+          </a>
+          <a class="btn btn-secondary" href="https://github.com/badugisoft/poppage" target="_blank" rel="noopener" data-i18n="hero.github">
+            View on GitHub
+          </a>
+        </div>
+        <p class="hero-note" data-i18n="hero.note">Signed &amp; notarized .dmg / .zip · Built 100% with Antigravity</p>
+      </div>
+    </section>
+
+    <section id="screenshots" class="section">
+      <div class="container">
+        <h2 data-i18n="screenshots.title">Screenshots</h2>
+        <p class="section-sub" data-i18n="screenshots.subtitle">Clean native macOS interface for both your menu bar popovers and page management.</p>
+        <div class="screenshot-grid">
+          <figure class="shot-card shot-popover">
+            <img src="images/screenshot-popover.png" alt="PopPage popover window" loading="lazy" />
+            <figcaption data-i18n="screenshots.popover">Popover Window</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="images/screenshot-page-settings.png" alt="PopPage page settings window" loading="lazy" />
+            <figcaption data-i18n="screenshots.pageSettings">Page Settings</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="images/screenshot-app-settings.png" alt="PopPage app settings window" loading="lazy" />
+            <figcaption data-i18n="screenshots.appSettings">App Settings</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section section-alt">
+      <div class="container">
+        <h2 data-i18n="features.title">Essential Features, Zero Bloat</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3 data-i18n="features.f1.title">Custom Menu Bar Icons</h3>
+            <p data-i18n="features.f1.desc">Fetch website favicons automatically, display custom text, or use your own image with macOS template mode support.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="features.f2.title">Navigation &amp; New Window Policies</h3>
+            <p data-i18n="features.f2.desc">Decide per page whether links stay in the popover, open in your default browser, or stay locked to the pinned URL.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="features.f3.title">Custom HTTP Headers</h3>
+            <p data-i18n="features.f3.desc">Attach custom HTTP/HTTPS request headers and User-Agent overrides per page—ideal for internal tools and mobile views.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="features.f4.title">Adaptive Toolbar &amp; Overlay</h3>
+            <p data-i18n="features.f4.desc">Bottom toolbar automatically adapts to webpage background colors, with optional overlay mode and adjustable opacity.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="features.f5.title">Persistent Size, Zoom &amp; State</h3>
+            <p data-i18n="features.f5.desc">Keep login sessions and scroll positions alive across popover closes, and remember resized dimensions and zoom levels.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="features.f6.title">Multilingual &amp; JSON Backup</h3>
+            <p data-i18n="features.f6.desc">Switch between 8 languages on the fly and export or import all pages, custom icons, and preferences as a single JSON file.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="shortcuts" class="section">
+      <div class="container narrow">
+        <h2 data-i18n="shortcuts.title">Keyboard Shortcuts</h2>
+        <p class="section-sub" data-i18n="shortcuts.subtitle">Optional per-page shortcuts when using the popover.</p>
+        <div class="shortcut-table-wrap">
+          <table class="shortcut-table">
+            <tbody>
+              <tr><td><kbd>⌘</kbd> + <kbd>+</kbd></td><td data-i18n="shortcuts.zoomIn">Zoom In</td></tr>
+              <tr><td><kbd>⌘</kbd> + <kbd>-</kbd></td><td data-i18n="shortcuts.zoomOut">Zoom Out</td></tr>
+              <tr><td><kbd>⌘</kbd> + <kbd>0</kbd></td><td data-i18n="shortcuts.zoomReset">Reset Zoom</td></tr>
+              <tr><td><kbd>⌘</kbd> + <kbd>[</kbd></td><td data-i18n="shortcuts.back">Back</td></tr>
+              <tr><td><kbd>⌘</kbd> + <kbd>]</kbd></td><td data-i18n="shortcuts.forward">Forward</td></tr>
+              <tr><td><kbd>⌘</kbd> + <kbd>R</kbd></td><td data-i18n="shortcuts.reload">Reload</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>PopPage · <a href="https://github.com/badugisoft/poppage" target="_blank" rel="noopener">badugisoft/poppage</a> · <a href="https://github.com/badugisoft/poppage/blob/main/CHANGELOG.md" target="_blank" rel="noopener" data-i18n="footer.changelog">Changelog</a></p>
+      <p class="muted" data-i18n="footer.built">Built 100% with Antigravity</p>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a9b0a6d79f624564bb0a40d5e89648f8"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

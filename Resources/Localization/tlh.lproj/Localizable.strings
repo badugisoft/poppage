@@ -1,0 +1,144 @@
+/* Main Menu */
+"menu.about" = "PopPage De'";
+"menu.hide" = "PopPage So'";
+"menu.quit" = "PopPage mev";
+"menu.edit" = "choH";
+"menu.edit.undo" = "qIl";
+"menu.edit.redo" = "qaSqa'";
+"menu.edit.cut" = "pe'";
+"menu.edit.copy" = "lIng";
+"menu.edit.paste" = "lan";
+"menu.edit.selectAll" = "Hoch wIv";
+"menu.window" = "Qorwagh";
+"menu.window.close" = "SoQmoH";
+"menu.window.minimize" = "machmoH";
+
+/* Status Bar Context Menu */
+"context.openInBrowser" = "navwI'Daq poSmoH";
+"context.reload" = "chenqa'moH";
+"context.managePages" = "ghItlh SeH…";
+"context.quit" = "PopPage mev";
+
+/* Popover Toolbar Tooltips */
+"toolbar.back" = "DoH";
+"toolbar.forward" = "ghoS";
+"toolbar.reload" = "chenqa'moH";
+"toolbar.zoomOut" = "machmoH";
+"toolbar.zoomReset" = "motlh mIw choHqa'";
+"toolbar.zoomIn" = "tInmoH";
+"toolbar.openInBrowser" = "motlh navwI'Daq poSmoH";
+
+/* WebView Messages */
+"webview.invalidURL" = "URL qar yIcher.";
+"webview.loadErrorTitle" = "ghItlh laDta'laHbe'";
+
+/* Model Display Names */
+"page.defaultName" = "ghItlh chu'";
+"iconType.favicon" = "Favicon";
+"iconType.text" = "ghItlh";
+"iconType.image" = "nagh beQ";
+"navigationPolicy.block" = "vIHQo'";
+"navigationPolicy.openExternal" = "Hur navwI'Daq poSmoH";
+"navigationPolicy.inPlace" = "naDev vIH";
+
+/* Manager Sidebar & Empty State */
+"manager.untitled" = "pong Hutlh";
+"manager.enableHelp" = "HIDjolevDaq 'ang";
+"manager.addHelp" = "ghItlh chu' chel";
+"manager.deleteHelp" = "wIvta'bogh ghItlh qIl";
+"manager.settings" = "SeHlaw";
+"manager.emptyTitle" = "ghItlh yIwIv";
+"manager.emptyDescription" = "bIng nIH + yI'uy, HIDjolevDaq Daq DachelmeH.";
+
+/* Page Editor */
+"editor.section.general" = "De' motlh";
+"editor.name.label" = "pong";
+"editor.name.prompt" = "chovnatlh: GitHub";
+"editor.url.label" = "URL";
+"editor.url.prompt" = "https://example.com";
+"editor.url.invalid" = "http:// pagh https:// ghajbogh URL qar yIghItlh.";
+"editor.enabled" = "HIDjolevDaq 'ang";
+
+"editor.section.icon" = "HIDjolev Degh";
+"editor.icon.style" = "mIw";
+"editor.icon.preview" = "leghpa'";
+"editor.icon.refreshFavicon" = "Favicon chu'moH";
+"editor.icon.textLabel" = "ghItlh 'ang";
+"editor.icon.textPrompt" = "chImchugh ghItlh pong lo'";
+"editor.icon.chooseImage" = "nagh beQ wIv…";
+"editor.icon.removeImage" = "teq";
+"editor.icon.template" = "Template nagh beQ lo'";
+"editor.icon.templateHelp" = "Hurgh mIwDaq Degh nguv choH.";
+
+"editor.section.popover" = "Popover Qorwagh";
+"editor.closeOnFocusLoss" = "buSHa'chugh SoQmoH";
+"editor.animated" = "poS/SoQ vIH";
+"editor.defaultWidth" = "motlh juch";
+"editor.defaultHeight" = "motlh 'ab";
+"editor.unit.pt" = "pt";
+"editor.size.captionOverlay" = "jan SeHlaw ngaSbogh Hoch tIn.";
+"editor.size.captionContent" = "jan SeHlaw ghajbe'bogh Daq tIn.";
+"editor.resizable" = "tIn choH laH";
+"editor.rememberSize" = "choHta'bogh tIn qaw";
+"editor.savedSize" = "polta'bogh tIn: %d × %d";
+"editor.reset" = "cherqa'";
+"editor.defaultZoom" = "motlh tIn mIw";
+"editor.rememberZoom" = "choHta'bogh tIn mIw qaw";
+"editor.savedZoom" = "polta'bogh tIn mIw: %d%%";
+
+"editor.section.navigation" = "rarwI' & vIH";
+"editor.allowNewWindows" = "Qorwagh chu' rarwI' Hur navwI'Daq poSmoH";
+"editor.navigationPolicy" = "ghItlh vIH";
+
+"editor.section.headers" = "HTTP Headers";
+"editor.headers.namePrompt" = "Header pong";
+"editor.headers.valuePrompt" = "lo'";
+"editor.headers.removeHelp" = "Header teq";
+"editor.headers.add" = "Header chel";
+"editor.headers.caption" = "HTTP/HTTPS ngeHDI' Headervam ngeH. chenqa'moHDI' choHqa'.";
+
+"editor.section.toolbar" = "bIng jan SeHlaw";
+"editor.toolbar.overlay" = "ghItlh DungDaq lan";
+"editor.toolbar.opacity" = "'em Hurgh";
+"editor.toolbar.backForward" = "DoH/ghoS leQ";
+"editor.toolbar.reload" = "chenqa'moH leQ";
+"editor.toolbar.zoom" = "tIn/mach leQ";
+
+"editor.openPopover" = "Popover poSmoH";
+"editor.deletePage" = "ghItlh qIl";
+"editor.deleteAlert.title" = "ghItlhvam DaqIl'a'?";
+"editor.deleteAlert.cancel" = "qIl";
+"editor.deleteAlert.confirm" = "qIl";
+"editor.deleteAlert.message" = "'%@' SeHlaw Degh je qIllu'.";
+
+/* App Settings */
+"settings.section.general" = "Hoch";
+"settings.launchAtLogin" = "taghDI' tagh";
+"settings.requiresApproval" = "System Settings > General > Login ItemsDaq chaw' poQ.";
+"settings.launchAtLoginError" = "taghDI' SeH choHlaHbe': %@";
+"settings.language" = "Hol";
+"settings.language.system" = "pat motlh";
+"settings.section.shortcuts" = "leQ tIn";
+"settings.shortcuts.enable" = "leQ tIn lo'";
+"settings.shortcuts.caption" = "Popover Qorwagh vIHtaHvIS Qap.";
+"settings.shortcuts.zoomIn" = "tInmoH";
+"settings.shortcuts.zoomOut" = "machmoH";
+"settings.shortcuts.zoomReset" = "tIn mIw cherqa'";
+"settings.shortcuts.back" = "DoH";
+"settings.shortcuts.forward" = "ghoS";
+"settings.shortcuts.reload" = "chenqa'moH";
+"settings.section.backup" = "pol & cherqa'";
+"settings.export" = "SeHlaw ngeH…";
+"settings.import" = "SeHlaw qem…";
+"settings.backup.caption" = "Hoch ghItlh, Degh, Hol SeHlaw je ngaS.";
+"settings.export.success" = "SeHlaw ngeHta'.";
+"settings.export.error" = "SeHlaw ngeHlaHbe': %@";
+"settings.import.invalidFormat" = "teywI'vam PopPage SeHlaw qar 'oHbe'.";
+"settings.import.error" = "SeHlaw qemlaHbe': %@";
+"settings.import.success" = "%d ghItlh qemta'.";
+"settings.importAlert.title" = "SeHlaw Daqem'a'?";
+"settings.importAlert.cancel" = "qIl";
+"settings.importAlert.confirm" = "qem";
+"settings.importAlert.message" = "DaH %d ghItlh SeHlaw je %d qemta'bogh ghItlh choH.";
+"settings.section.about" = "De'";
+"settings.version" = "mI'";

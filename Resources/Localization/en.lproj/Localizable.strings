@@ -1,0 +1,144 @@
+/* Main Menu */
+"menu.about" = "About PopPage";
+"menu.hide" = "Hide PopPage";
+"menu.quit" = "Quit PopPage";
+"menu.edit" = "Edit";
+"menu.edit.undo" = "Undo";
+"menu.edit.redo" = "Redo";
+"menu.edit.cut" = "Cut";
+"menu.edit.copy" = "Copy";
+"menu.edit.paste" = "Paste";
+"menu.edit.selectAll" = "Select All";
+"menu.window" = "Window";
+"menu.window.close" = "Close";
+"menu.window.minimize" = "Minimize";
+
+/* Status Bar Context Menu */
+"context.openInBrowser" = "Open in Browser";
+"context.reload" = "Reload";
+"context.managePages" = "Manage Pages…";
+"context.quit" = "Quit PopPage";
+
+/* Popover Toolbar Tooltips */
+"toolbar.back" = "Back";
+"toolbar.forward" = "Forward";
+"toolbar.reload" = "Reload";
+"toolbar.zoomOut" = "Zoom Out";
+"toolbar.zoomReset" = "Reset to Default Zoom";
+"toolbar.zoomIn" = "Zoom In";
+"toolbar.openInBrowser" = "Open in Default Browser";
+
+/* WebView Messages */
+"webview.invalidURL" = "Please set a valid URL.";
+"webview.loadErrorTitle" = "Unable to load page";
+
+/* Model Display Names */
+"page.defaultName" = "New Page";
+"iconType.favicon" = "Favicon";
+"iconType.text" = "Text";
+"iconType.image" = "Image";
+"navigationPolicy.block" = "Do Not Navigate";
+"navigationPolicy.openExternal" = "Open in External Browser";
+"navigationPolicy.inPlace" = "Navigate in Popover";
+
+/* Manager Sidebar & Empty State */
+"manager.untitled" = "Untitled";
+"manager.enableHelp" = "Show in Menu Bar";
+"manager.addHelp" = "Add New Page";
+"manager.deleteHelp" = "Delete Selected Page";
+"manager.settings" = "Settings";
+"manager.emptyTitle" = "Select a Page";
+"manager.emptyDescription" = "Click the + button at the bottom left to add a website to the menu bar.";
+
+/* Page Editor */
+"editor.section.general" = "Basic Info";
+"editor.name.label" = "Name";
+"editor.name.prompt" = "e.g. GitHub";
+"editor.url.label" = "URL";
+"editor.url.prompt" = "https://example.com";
+"editor.url.invalid" = "Enter a valid URL starting with http:// or https://.";
+"editor.enabled" = "Show in Menu Bar";
+
+"editor.section.icon" = "Menu Bar Icon";
+"editor.icon.style" = "Style";
+"editor.icon.preview" = "Preview";
+"editor.icon.refreshFavicon" = "Refresh Favicon";
+"editor.icon.textLabel" = "Display Text";
+"editor.icon.textPrompt" = "Uses page name if empty";
+"editor.icon.chooseImage" = "Choose Image…";
+"editor.icon.removeImage" = "Remove";
+"editor.icon.template" = "Use Template Image";
+"editor.icon.templateHelp" = "Automatically inverts icon colors for dark mode.";
+
+"editor.section.popover" = "Popover Window";
+"editor.closeOnFocusLoss" = "Close automatically when focus is lost";
+"editor.animated" = "Open/Close Animation";
+"editor.defaultWidth" = "Default Width";
+"editor.defaultHeight" = "Default Height";
+"editor.unit.pt" = "pt";
+"editor.size.captionOverlay" = "Total size including the toolbar.";
+"editor.size.captionContent" = "Webpage area size excluding the toolbar.";
+"editor.resizable" = "Allow Resizing";
+"editor.rememberSize" = "Remember Modified Size";
+"editor.savedSize" = "Saved Size: %d × %d";
+"editor.reset" = "Reset";
+"editor.defaultZoom" = "Default Zoom";
+"editor.rememberZoom" = "Remember Modified Zoom";
+"editor.savedZoom" = "Saved Zoom: %d%%";
+
+"editor.section.navigation" = "Links & Navigation";
+"editor.allowNewWindows" = "Open new window links in external browser";
+"editor.navigationPolicy" = "Page Navigation";
+
+"editor.section.headers" = "HTTP Headers";
+"editor.headers.namePrompt" = "Header Name";
+"editor.headers.valuePrompt" = "Value";
+"editor.headers.removeHelp" = "Remove Header";
+"editor.headers.add" = "Add Header";
+"editor.headers.caption" = "Sent on HTTP/HTTPS requests for this page. Changes apply on next load or reload.";
+
+"editor.section.toolbar" = "Bottom Toolbar";
+"editor.toolbar.overlay" = "Overlay on Webpage";
+"editor.toolbar.opacity" = "Background Opacity";
+"editor.toolbar.backForward" = "Back/Forward Buttons";
+"editor.toolbar.reload" = "Reload Button";
+"editor.toolbar.zoom" = "Zoom Buttons";
+
+"editor.openPopover" = "Open Popover";
+"editor.deletePage" = "Delete Page";
+"editor.deleteAlert.title" = "Delete this page?";
+"editor.deleteAlert.cancel" = "Cancel";
+"editor.deleteAlert.confirm" = "Delete";
+"editor.deleteAlert.message" = "Settings and saved icon for '%@' will be deleted.";
+
+/* App Settings */
+"settings.section.general" = "General";
+"settings.launchAtLogin" = "Launch Automatically at Login";
+"settings.requiresApproval" = "Approval is required in System Settings > General > Login Items.";
+"settings.launchAtLoginError" = "Unable to update Launch at Login setting: %@";
+"settings.language" = "Language";
+"settings.language.system" = "System Default";
+"settings.section.shortcuts" = "Keyboard Shortcuts";
+"settings.shortcuts.enable" = "Enable Keyboard Shortcuts";
+"settings.shortcuts.caption" = "Works while a popover window is active.";
+"settings.shortcuts.zoomIn" = "Zoom In";
+"settings.shortcuts.zoomOut" = "Zoom Out";
+"settings.shortcuts.zoomReset" = "Reset Zoom";
+"settings.shortcuts.back" = "Back";
+"settings.shortcuts.forward" = "Forward";
+"settings.shortcuts.reload" = "Reload";
+"settings.section.backup" = "Backup & Restore";
+"settings.export" = "Export Settings…";
+"settings.import" = "Import Settings…";
+"settings.backup.caption" = "Includes all pages, custom icons, and language preference.";
+"settings.export.success" = "Settings exported successfully.";
+"settings.export.error" = "Failed to export settings: %@";
+"settings.import.invalidFormat" = "The selected file is not a valid PopPage settings backup.";
+"settings.import.error" = "Failed to import settings: %@";
+"settings.import.success" = "Imported %d page(s).";
+"settings.importAlert.title" = "Import Settings?";
+"settings.importAlert.cancel" = "Cancel";
+"settings.importAlert.confirm" = "Import";
+"settings.importAlert.message" = "This will replace your current %d page(s) and settings with %d imported page(s).";
+"settings.section.about" = "About";
+"settings.version" = "Version";

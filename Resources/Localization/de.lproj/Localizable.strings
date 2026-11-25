@@ -1,0 +1,144 @@
+/* Main Menu */
+"menu.about" = "Über PopPage";
+"menu.hide" = "PopPage ausblenden";
+"menu.quit" = "PopPage beenden";
+"menu.edit" = "Bearbeiten";
+"menu.edit.undo" = "Widerrufen";
+"menu.edit.redo" = "Wiederholen";
+"menu.edit.cut" = "Ausschneiden";
+"menu.edit.copy" = "Kopieren";
+"menu.edit.paste" = "Einsetzen";
+"menu.edit.selectAll" = "Alles auswählen";
+"menu.window" = "Fenster";
+"menu.window.close" = "Schließen";
+"menu.window.minimize" = "Im Dock ablegen";
+
+/* Status Bar Context Menu */
+"context.openInBrowser" = "Im Browser öffnen";
+"context.reload" = "Neu laden";
+"context.managePages" = "Seiten verwalten…";
+"context.quit" = "PopPage beenden";
+
+/* Popover Toolbar Tooltips */
+"toolbar.back" = "Zurück";
+"toolbar.forward" = "Vorwärts";
+"toolbar.reload" = "Neu laden";
+"toolbar.zoomOut" = "Verkleinern";
+"toolbar.zoomReset" = "Auf Standardzoom zurücksetzen";
+"toolbar.zoomIn" = "Vergrößern";
+"toolbar.openInBrowser" = "Im Standardbrowser öffnen";
+
+/* WebView Messages */
+"webview.invalidURL" = "Bitte eine gültige URL festlegen.";
+"webview.loadErrorTitle" = "Seite kann nicht geladen werden";
+
+/* Model Display Names */
+"page.defaultName" = "Neue Seite";
+"iconType.favicon" = "Favicon";
+"iconType.text" = "Text";
+"iconType.image" = "Bild";
+"navigationPolicy.block" = "Nicht navigieren";
+"navigationPolicy.openExternal" = "Im externen Browser öffnen";
+"navigationPolicy.inPlace" = "Im Popover navigieren";
+
+/* Manager Sidebar & Empty State */
+"manager.untitled" = "Ohne Titel";
+"manager.enableHelp" = "In Menüleiste anzeigen";
+"manager.addHelp" = "Neue Seite hinzufügen";
+"manager.deleteHelp" = "Ausgewählte Seite löschen";
+"manager.settings" = "Einstellungen";
+"manager.emptyTitle" = "Seite auswählen";
+"manager.emptyDescription" = "Klicke unten links auf +, um eine Website zur Menüleiste hinzuzufügen.";
+
+/* Page Editor */
+"editor.section.general" = "Basisinfos";
+"editor.name.label" = "Name";
+"editor.name.prompt" = "z. B. GitHub";
+"editor.url.label" = "URL";
+"editor.url.prompt" = "https://example.com";
+"editor.url.invalid" = "Gib eine gültige URL beginnend mit http:// oder https:// ein.";
+"editor.enabled" = "In Menüleiste anzeigen";
+
+"editor.section.icon" = "Menüleistensymbol";
+"editor.icon.style" = "Stil";
+"editor.icon.preview" = "Vorschau";
+"editor.icon.refreshFavicon" = "Favicon aktualisieren";
+"editor.icon.textLabel" = "Anzeigetext";
+"editor.icon.textPrompt" = "Verwendet Seitennamen, wenn leer";
+"editor.icon.chooseImage" = "Bild auswählen…";
+"editor.icon.removeImage" = "Entfernen";
+"editor.icon.template" = "Vorlagenbild verwenden";
+"editor.icon.templateHelp" = "Invertiert Symbolfarben automatisch für den Dunkelmodus.";
+
+"editor.section.popover" = "Popover-Fenster";
+"editor.closeOnFocusLoss" = "Bei Fokusverlust automatisch schließen";
+"editor.animated" = "Öffnen-/Schließen-Animation";
+"editor.defaultWidth" = "Standardbreite";
+"editor.defaultHeight" = "Standardhöhe";
+"editor.unit.pt" = "pt";
+"editor.size.captionOverlay" = "Gesamtgröße einschließlich Symbolleiste.";
+"editor.size.captionContent" = "Größe des Webseitenbereichs ohne Symbolleiste.";
+"editor.resizable" = "Größenänderung erlauben";
+"editor.rememberSize" = "Geänderte Größe merken";
+"editor.savedSize" = "Gespeicherte Größe: %d × %d";
+"editor.reset" = "Zurücksetzen";
+"editor.defaultZoom" = "Standardzoom";
+"editor.rememberZoom" = "Geänderten Zoom merken";
+"editor.savedZoom" = "Gespeicherter Zoom: %d%%";
+
+"editor.section.navigation" = "Links & Navigation";
+"editor.allowNewWindows" = "Links für neue Fenster im externen Browser öffnen";
+"editor.navigationPolicy" = "Seitennavigation";
+
+"editor.section.headers" = "HTTP-Header";
+"editor.headers.namePrompt" = "Header-Name";
+"editor.headers.valuePrompt" = "Wert";
+"editor.headers.removeHelp" = "Header entfernen";
+"editor.headers.add" = "Header hinzufügen";
+"editor.headers.caption" = "Wird bei HTTP/HTTPS-Anfragen für diese Seite gesendet. Änderungen gelten beim nächsten Laden oder Neuladen.";
+
+"editor.section.toolbar" = "Untere Symbolleiste";
+"editor.toolbar.overlay" = "Über Webseite einblenden";
+"editor.toolbar.opacity" = "Hintergrunddeckkraft";
+"editor.toolbar.backForward" = "Zurück-/Vorwärts-Tasten";
+"editor.toolbar.reload" = "Neu-laden-Taste";
+"editor.toolbar.zoom" = "Zoom-Tasten";
+
+"editor.openPopover" = "Popover öffnen";
+"editor.deletePage" = "Seite löschen";
+"editor.deleteAlert.title" = "Diese Seite löschen?";
+"editor.deleteAlert.cancel" = "Abbrechen";
+"editor.deleteAlert.confirm" = "Löschen";
+"editor.deleteAlert.message" = "Einstellungen und gespeichertes Symbol für „%@“ werden gelöscht.";
+
+/* App Settings */
+"settings.section.general" = "Allgemein";
+"settings.launchAtLogin" = "Bei Anmeldung automatisch starten";
+"settings.requiresApproval" = "Genehmigung in Systemeinstellungen > Allgemein > Anmeldeobjekte erforderlich.";
+"settings.launchAtLoginError" = "Anmeldeobjekt konnte nicht aktualisiert werden: %@";
+"settings.language" = "Sprache";
+"settings.language.system" = "Systemstandard";
+"settings.section.shortcuts" = "Tastaturkurzbefehle";
+"settings.shortcuts.enable" = "Tastaturkurzbefehle aktivieren";
+"settings.shortcuts.caption" = "Funktioniert, solange ein Popover-Fenster aktiv ist.";
+"settings.shortcuts.zoomIn" = "Vergrößern";
+"settings.shortcuts.zoomOut" = "Verkleinern";
+"settings.shortcuts.zoomReset" = "Zoom zurücksetzen";
+"settings.shortcuts.back" = "Zurück";
+"settings.shortcuts.forward" = "Vorwärts";
+"settings.shortcuts.reload" = "Neu laden";
+"settings.section.backup" = "Sicherung & Wiederherstellung";
+"settings.export" = "Einstellungen exportieren…";
+"settings.import" = "Einstellungen importieren…";
+"settings.backup.caption" = "Enthält alle Seiten, benutzerdefinierte Symbole und die Spracheinstellung.";
+"settings.export.success" = "Einstellungen erfolgreich exportiert.";
+"settings.export.error" = "Export fehlgeschlagen: %@";
+"settings.import.invalidFormat" = "Die ausgewählte Datei ist keine gültige PopPage-Sicherung.";
+"settings.import.error" = "Import fehlgeschlagen: %@";
+"settings.import.success" = "%d Seite(n) importiert.";
+"settings.importAlert.title" = "Einstellungen importieren?";
+"settings.importAlert.cancel" = "Abbrechen";
+"settings.importAlert.confirm" = "Importieren";
+"settings.importAlert.message" = "Dadurch werden deine aktuellen %d Seite(n) und Einstellungen durch %d importierte Seite(n) ersetzt.";
+"settings.section.about" = "Über";
+"settings.version" = "Version";

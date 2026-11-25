@@ -1,0 +1,144 @@
+/* Main Menu */
+"menu.about" = "Acerca de PopPage";
+"menu.hide" = "Ocultar PopPage";
+"menu.quit" = "Salir de PopPage";
+"menu.edit" = "Edición";
+"menu.edit.undo" = "Deshacer";
+"menu.edit.redo" = "Rehacer";
+"menu.edit.cut" = "Cortar";
+"menu.edit.copy" = "Copiar";
+"menu.edit.paste" = "Pegar";
+"menu.edit.selectAll" = "Seleccionar todo";
+"menu.window" = "Ventana";
+"menu.window.close" = "Cerrar";
+"menu.window.minimize" = "Minimizar";
+
+/* Status Bar Context Menu */
+"context.openInBrowser" = "Abrir en el navegador";
+"context.reload" = "Recargar";
+"context.managePages" = "Gestionar páginas…";
+"context.quit" = "Salir de PopPage";
+
+/* Popover Toolbar Tooltips */
+"toolbar.back" = "Atrás";
+"toolbar.forward" = "Adelante";
+"toolbar.reload" = "Recargar";
+"toolbar.zoomOut" = "Alejar";
+"toolbar.zoomReset" = "Restablecer zoom predeterminado";
+"toolbar.zoomIn" = "Acercar";
+"toolbar.openInBrowser" = "Abrir en el navegador predeterminado";
+
+/* WebView Messages */
+"webview.invalidURL" = "Introduce una URL válida.";
+"webview.loadErrorTitle" = "No se puede cargar la página";
+
+/* Model Display Names */
+"page.defaultName" = "Nueva página";
+"iconType.favicon" = "Favicon";
+"iconType.text" = "Texto";
+"iconType.image" = "Imagen";
+"navigationPolicy.block" = "No navegar";
+"navigationPolicy.openExternal" = "Abrir en navegador externo";
+"navigationPolicy.inPlace" = "Navegar en la ventana emergente";
+
+/* Manager Sidebar & Empty State */
+"manager.untitled" = "Sin título";
+"manager.enableHelp" = "Mostrar en la barra de menús";
+"manager.addHelp" = "Añadir nueva página";
+"manager.deleteHelp" = "Eliminar página seleccionada";
+"manager.settings" = "Ajustes";
+"manager.emptyTitle" = "Selecciona una página";
+"manager.emptyDescription" = "Haz clic en el botón + abajo a la izquierda para añadir un sitio web a la barra de menús.";
+
+/* Page Editor */
+"editor.section.general" = "Información básica";
+"editor.name.label" = "Nombre";
+"editor.name.prompt" = "p. ej., GitHub";
+"editor.url.label" = "URL";
+"editor.url.prompt" = "https://example.com";
+"editor.url.invalid" = "Introduce una URL válida que empiece por http:// o https://.";
+"editor.enabled" = "Mostrar en la barra de menús";
+
+"editor.section.icon" = "Icono de la barra de menús";
+"editor.icon.style" = "Estilo";
+"editor.icon.preview" = "Vista previa";
+"editor.icon.refreshFavicon" = "Actualizar favicon";
+"editor.icon.textLabel" = "Texto mostrado";
+"editor.icon.textPrompt" = "Usa el nombre de la página si está vacío";
+"editor.icon.chooseImage" = "Elegir imagen…";
+"editor.icon.removeImage" = "Eliminar";
+"editor.icon.template" = "Usar imagen de plantilla";
+"editor.icon.templateHelp" = "Invierte automáticamente los colores del icono en modo oscuro.";
+
+"editor.section.popover" = "Ventana emergente";
+"editor.closeOnFocusLoss" = "Cerrar automáticamente al perder el foco";
+"editor.animated" = "Animación de apertura/cierre";
+"editor.defaultWidth" = "Ancho predeterminado";
+"editor.defaultHeight" = "Alto predeterminado";
+"editor.unit.pt" = "pt";
+"editor.size.captionOverlay" = "Tamaño total incluyendo la barra de herramientas.";
+"editor.size.captionContent" = "Tamaño del área web sin la barra de herramientas.";
+"editor.resizable" = "Permitir cambiar tamaño";
+"editor.rememberSize" = "Recordar tamaño modificado";
+"editor.savedSize" = "Tamaño guardado: %d × %d";
+"editor.reset" = "Restablecer";
+"editor.defaultZoom" = "Zoom predeterminado";
+"editor.rememberZoom" = "Recordar zoom modificado";
+"editor.savedZoom" = "Zoom guardado: %d%%";
+
+"editor.section.navigation" = "Enlaces y navegación";
+"editor.allowNewWindows" = "Abrir enlaces de nueva ventana en navegador externo";
+"editor.navigationPolicy" = "Navegación de página";
+
+"editor.section.headers" = "Cabeceras HTTP";
+"editor.headers.namePrompt" = "Nombre de cabecera";
+"editor.headers.valuePrompt" = "Valor";
+"editor.headers.removeHelp" = "Eliminar cabecera";
+"editor.headers.add" = "Añadir cabecera";
+"editor.headers.caption" = "Se envían en peticiones HTTP/HTTPS de esta página. Los cambios se aplican al cargar o recargar.";
+
+"editor.section.toolbar" = "Barra inferior";
+"editor.toolbar.overlay" = "Superponer sobre la página web";
+"editor.toolbar.opacity" = "Opacidad del fondo";
+"editor.toolbar.backForward" = "Botones Atrás/Adelante";
+"editor.toolbar.reload" = "Botón Recargar";
+"editor.toolbar.zoom" = "Botones de zoom";
+
+"editor.openPopover" = "Abrir ventana emergente";
+"editor.deletePage" = "Eliminar página";
+"editor.deleteAlert.title" = "¿Eliminar esta página?";
+"editor.deleteAlert.cancel" = "Cancelar";
+"editor.deleteAlert.confirm" = "Eliminar";
+"editor.deleteAlert.message" = "Se eliminarán los ajustes y el icono guardado de «%@».";
+
+/* App Settings */
+"settings.section.general" = "General";
+"settings.launchAtLogin" = "Abrir automáticamente al iniciar sesión";
+"settings.requiresApproval" = "Se requiere aprobación en Ajustes del Sistema > General > Ítems de inicio.";
+"settings.launchAtLoginError" = "No se pudo actualizar el inicio automático: %@";
+"settings.language" = "Idioma";
+"settings.language.system" = "Predeterminado del sistema";
+"settings.section.shortcuts" = "Atajos de teclado";
+"settings.shortcuts.enable" = "Activar atajos de teclado";
+"settings.shortcuts.caption" = "Funciona mientras una ventana emergente está activa.";
+"settings.shortcuts.zoomIn" = "Acercar";
+"settings.shortcuts.zoomOut" = "Alejar";
+"settings.shortcuts.zoomReset" = "Restablecer zoom";
+"settings.shortcuts.back" = "Atrás";
+"settings.shortcuts.forward" = "Adelante";
+"settings.shortcuts.reload" = "Recargar";
+"settings.section.backup" = "Copia de seguridad y restauración";
+"settings.export" = "Exportar ajustes…";
+"settings.import" = "Importar ajustes…";
+"settings.backup.caption" = "Incluye todas las páginas, iconos personalizados y preferencia de idioma.";
+"settings.export.success" = "Ajustes exportados correctamente.";
+"settings.export.error" = "Error al exportar los ajustes: %@";
+"settings.import.invalidFormat" = "El archivo seleccionado no es una copia de seguridad válida de PopPage.";
+"settings.import.error" = "Error al importar los ajustes: %@";
+"settings.import.success" = "Se importaron %d página(s).";
+"settings.importAlert.title" = "¿Importar ajustes?";
+"settings.importAlert.cancel" = "Cancelar";
+"settings.importAlert.confirm" = "Importar";
+"settings.importAlert.message" = "Esto reemplazará tus %d página(s) y ajustes actuales con %d página(s) importada(s).";
+"settings.section.about" = "Acerca de";
+"settings.version" = "Versión";

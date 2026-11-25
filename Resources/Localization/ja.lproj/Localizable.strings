@@ -1,0 +1,144 @@
+/* Main Menu */
+"menu.about" = "PopPage について";
+"menu.hide" = "PopPage を隠す";
+"menu.quit" = "PopPage を終了";
+"menu.edit" = "編集";
+"menu.edit.undo" = "取り消す";
+"menu.edit.redo" = "やり直す";
+"menu.edit.cut" = "カット";
+"menu.edit.copy" = "コピー";
+"menu.edit.paste" = "ペースト";
+"menu.edit.selectAll" = "すべてを選択";
+"menu.window" = "ウインドウ";
+"menu.window.close" = "閉じる";
+"menu.window.minimize" = "しまう";
+
+/* Status Bar Context Menu */
+"context.openInBrowser" = "ブラウザで開く";
+"context.reload" = "再読み込み";
+"context.managePages" = "ページを管理…";
+"context.quit" = "PopPage を終了";
+
+/* Popover Toolbar Tooltips */
+"toolbar.back" = "戻る";
+"toolbar.forward" = "進む";
+"toolbar.reload" = "再読み込み";
+"toolbar.zoomOut" = "縮小";
+"toolbar.zoomReset" = "デフォルトの拡大率に戻す";
+"toolbar.zoomIn" = "拡大";
+"toolbar.openInBrowser" = "デフォルトのブラウザで開く";
+
+/* WebView Messages */
+"webview.invalidURL" = "有効な URL を設定してください。";
+"webview.loadErrorTitle" = "ページを読み込めません";
+
+/* Model Display Names */
+"page.defaultName" = "新規ページ";
+"iconType.favicon" = "ファビコン";
+"iconType.text" = "テキスト";
+"iconType.image" = "画像";
+"navigationPolicy.block" = "移動しない";
+"navigationPolicy.openExternal" = "外部ブラウザで開く";
+"navigationPolicy.inPlace" = "ポップオーバー内で移動";
+
+/* Manager Sidebar & Empty State */
+"manager.untitled" = "名称未設定";
+"manager.enableHelp" = "メニューバーに表示";
+"manager.addHelp" = "新規ページを追加";
+"manager.deleteHelp" = "選択したページを削除";
+"manager.settings" = "設定";
+"manager.emptyTitle" = "ページを選択";
+"manager.emptyDescription" = "左下の + ボタンをクリックしてメニューバーにウェブサイトを追加してください。";
+
+/* Page Editor */
+"editor.section.general" = "基本情報";
+"editor.name.label" = "名前";
+"editor.name.prompt" = "例: GitHub";
+"editor.url.label" = "URL";
+"editor.url.prompt" = "https://example.com";
+"editor.url.invalid" = "http:// または https:// で始まる有効な URL を入力してください。";
+"editor.enabled" = "メニューバーに表示";
+
+"editor.section.icon" = "メニューバーアイコン";
+"editor.icon.style" = "スタイル";
+"editor.icon.preview" = "プレビュー";
+"editor.icon.refreshFavicon" = "ファビコンを更新";
+"editor.icon.textLabel" = "表示テキスト";
+"editor.icon.textPrompt" = "空の場合はページ名を使用";
+"editor.icon.chooseImage" = "画像を選択…";
+"editor.icon.removeImage" = "削除";
+"editor.icon.template" = "テンプレート画像を使用";
+"editor.icon.templateHelp" = "ダークモードに合わせてアイコンの色を自動反転します。";
+
+"editor.section.popover" = "ポップオーバーウインドウ";
+"editor.closeOnFocusLoss" = "フォーカスを失ったら自動的に閉じる";
+"editor.animated" = "開閉アニメーション";
+"editor.defaultWidth" = "デフォルトの幅";
+"editor.defaultHeight" = "デフォルトの高さ";
+"editor.unit.pt" = "pt";
+"editor.size.captionOverlay" = "ツールバーを含む全体サイズです。";
+"editor.size.captionContent" = "ツールバーを除いたウェブページ領域のサイズです。";
+"editor.resizable" = "サイズ変更を許可";
+"editor.rememberSize" = "変更したサイズを記憶";
+"editor.savedSize" = "保存されたサイズ: %d × %d";
+"editor.reset" = "リセット";
+"editor.defaultZoom" = "デフォルトの拡大率";
+"editor.rememberZoom" = "変更した拡大率を記憶";
+"editor.savedZoom" = "保存された拡大率: %d%%";
+
+"editor.section.navigation" = "リンクと移動";
+"editor.allowNewWindows" = "新しいウインドウのリンクを外部ブラウザで開く";
+"editor.navigationPolicy" = "ページ移動";
+
+"editor.section.headers" = "HTTP ヘッダー";
+"editor.headers.namePrompt" = "ヘッダー名";
+"editor.headers.valuePrompt" = "値";
+"editor.headers.removeHelp" = "ヘッダーを削除";
+"editor.headers.add" = "ヘッダーを追加";
+"editor.headers.caption" = "このページの HTTP/HTTPS リクエスト時に送信されます。変更は次の読み込みまたは再読み込みから適用されます。";
+
+"editor.section.toolbar" = "下部ツールバー";
+"editor.toolbar.overlay" = "ウェブページ上にオーバーレイ";
+"editor.toolbar.opacity" = "背景の不透明度";
+"editor.toolbar.backForward" = "戻る/進むボタン";
+"editor.toolbar.reload" = "再読み込みボタン";
+"editor.toolbar.zoom" = "拡大/縮小ボタン";
+
+"editor.openPopover" = "ポップオーバーを開く";
+"editor.deletePage" = "ページを削除";
+"editor.deleteAlert.title" = "このページを削除しますか？";
+"editor.deleteAlert.cancel" = "キャンセル";
+"editor.deleteAlert.confirm" = "削除";
+"editor.deleteAlert.message" = "「%@」の設定と保存されたアイコンが削除されます。";
+
+/* App Settings */
+"settings.section.general" = "一般";
+"settings.launchAtLogin" = "ログイン時に自動的に開く";
+"settings.requiresApproval" = "システム設定 > 一般 > ログイン項目での承認が必要です。";
+"settings.launchAtLoginError" = "ログイン時の起動設定を更新できませんでした: %@";
+"settings.language" = "言語";
+"settings.language.system" = "システムデフォルト";
+"settings.section.shortcuts" = "キーボードショートカット";
+"settings.shortcuts.enable" = "キーボードショートカットを有効にする";
+"settings.shortcuts.caption" = "ポップオーバーウインドウがアクティブなときに動作します。";
+"settings.shortcuts.zoomIn" = "拡大";
+"settings.shortcuts.zoomOut" = "縮小";
+"settings.shortcuts.zoomReset" = "拡大率をリセット";
+"settings.shortcuts.back" = "戻る";
+"settings.shortcuts.forward" = "進む";
+"settings.shortcuts.reload" = "再読み込み";
+"settings.section.backup" = "バックアップと復元";
+"settings.export" = "設定を書き出す…";
+"settings.import" = "設定を読み込む…";
+"settings.backup.caption" = "すべてのページ、カスタムアイコン、言語設定が含まれます。";
+"settings.export.success" = "設定を書き出しました。";
+"settings.export.error" = "設定の書き出しに失敗しました: %@";
+"settings.import.invalidFormat" = "選択されたファイルは有効な PopPage 設定バックアップではありません。";
+"settings.import.error" = "設定の読み込みに失敗しました: %@";
+"settings.import.success" = "%d 件のページを読み込みました。";
+"settings.importAlert.title" = "設定を読み込みますか？";
+"settings.importAlert.cancel" = "キャンセル";
+"settings.importAlert.confirm" = "読み込む";
+"settings.importAlert.message" = "現在の %d 件のページと設定が、読み込んだ %d 件のページに置き換わります。";
+"settings.section.about" = "情報";
+"settings.version" = "バージョン";

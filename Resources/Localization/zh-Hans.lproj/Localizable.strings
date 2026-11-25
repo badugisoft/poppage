@@ -1,0 +1,144 @@
+/* Main Menu */
+"menu.about" = "关于 PopPage";
+"menu.hide" = "隐藏 PopPage";
+"menu.quit" = "退出 PopPage";
+"menu.edit" = "编辑";
+"menu.edit.undo" = "撤销";
+"menu.edit.redo" = "重做";
+"menu.edit.cut" = "剪切";
+"menu.edit.copy" = "拷贝";
+"menu.edit.paste" = "粘贴";
+"menu.edit.selectAll" = "全选";
+"menu.window" = "窗口";
+"menu.window.close" = "关闭";
+"menu.window.minimize" = "最小化";
+
+/* Status Bar Context Menu */
+"context.openInBrowser" = "在浏览器中打开";
+"context.reload" = "重新加载";
+"context.managePages" = "管理页面…";
+"context.quit" = "退出 PopPage";
+
+/* Popover Toolbar Tooltips */
+"toolbar.back" = "后退";
+"toolbar.forward" = "前进";
+"toolbar.reload" = "重新加载";
+"toolbar.zoomOut" = "缩小";
+"toolbar.zoomReset" = "重置为默认缩放";
+"toolbar.zoomIn" = "放大";
+"toolbar.openInBrowser" = "在默认浏览器中打开";
+
+/* WebView Messages */
+"webview.invalidURL" = "请设置有效的 URL。";
+"webview.loadErrorTitle" = "无法加载页面";
+
+/* Model Display Names */
+"page.defaultName" = "新页面";
+"iconType.favicon" = "网站图标";
+"iconType.text" = "文本";
+"iconType.image" = "图像";
+"navigationPolicy.block" = "不跳转";
+"navigationPolicy.openExternal" = "在外部浏览器中打开";
+"navigationPolicy.inPlace" = "在弹出窗口中跳转";
+
+/* Manager Sidebar & Empty State */
+"manager.untitled" = "未命名";
+"manager.enableHelp" = "在菜单栏中显示";
+"manager.addHelp" = "添加新页面";
+"manager.deleteHelp" = "删除所选页面";
+"manager.settings" = "设置";
+"manager.emptyTitle" = "选择一个页面";
+"manager.emptyDescription" = "点击左下角的 + 按钮将网站添加到菜单栏。";
+
+/* Page Editor */
+"editor.section.general" = "基本信息";
+"editor.name.label" = "名称";
+"editor.name.prompt" = "例如：GitHub";
+"editor.url.label" = "URL";
+"editor.url.prompt" = "https://example.com";
+"editor.url.invalid" = "请输入以 http:// 或 https:// 开头的有效 URL。";
+"editor.enabled" = "在菜单栏中显示";
+
+"editor.section.icon" = "菜单栏图标";
+"editor.icon.style" = "样式";
+"editor.icon.preview" = "预览";
+"editor.icon.refreshFavicon" = "刷新图标";
+"editor.icon.textLabel" = "显示文本";
+"editor.icon.textPrompt" = "留空则使用页面名称";
+"editor.icon.chooseImage" = "选择图像…";
+"editor.icon.removeImage" = "移除";
+"editor.icon.template" = "使用模板图像";
+"editor.icon.templateHelp" = "针对深色模式自动反转图标颜色。";
+
+"editor.section.popover" = "弹出窗口";
+"editor.closeOnFocusLoss" = "失去焦点时自动关闭";
+"editor.animated" = "打开/关闭动画";
+"editor.defaultWidth" = "默认宽度";
+"editor.defaultHeight" = "默认高度";
+"editor.unit.pt" = "pt";
+"editor.size.captionOverlay" = "包含工具栏在内的总大小。";
+"editor.size.captionContent" = "不包含工具栏的网页区域大小。";
+"editor.resizable" = "允许调整大小";
+"editor.rememberSize" = "记住修改后的大小";
+"editor.savedSize" = "已保存大小：%d × %d";
+"editor.reset" = "重置";
+"editor.defaultZoom" = "默认缩放";
+"editor.rememberZoom" = "记住修改后的缩放";
+"editor.savedZoom" = "已保存缩放：%d%%";
+
+"editor.section.navigation" = "链接与导航";
+"editor.allowNewWindows" = "在外部浏览器中打开新窗口链接";
+"editor.navigationPolicy" = "页面导航";
+
+"editor.section.headers" = "HTTP 请求头";
+"editor.headers.namePrompt" = "请求头名称";
+"editor.headers.valuePrompt" = "值";
+"editor.headers.removeHelp" = "移除请求头";
+"editor.headers.add" = "添加请求头";
+"editor.headers.caption" = "在请求此页面的 HTTP/HTTPS 时发送。更改将在下次加载或重新加载时生效。";
+
+"editor.section.toolbar" = "底部工具栏";
+"editor.toolbar.overlay" = "覆盖在网页上方";
+"editor.toolbar.opacity" = "背景不透明度";
+"editor.toolbar.backForward" = "后退/前进按钮";
+"editor.toolbar.reload" = "重新加载按钮";
+"editor.toolbar.zoom" = "缩放按钮";
+
+"editor.openPopover" = "打开弹出窗口";
+"editor.deletePage" = "删除页面";
+"editor.deleteAlert.title" = "确定删除此页面？";
+"editor.deleteAlert.cancel" = "取消";
+"editor.deleteAlert.confirm" = "删除";
+"editor.deleteAlert.message" = "“%@”的设置和已保存图标将被删除。";
+
+/* App Settings */
+"settings.section.general" = "通用";
+"settings.launchAtLogin" = "登录时自动启动";
+"settings.requiresApproval" = "需要在“系统设置” > “通用” > “登录项”中批准。";
+"settings.launchAtLoginError" = "无法更新登录时启动设置：%@";
+"settings.language" = "语言";
+"settings.language.system" = "系统默认";
+"settings.section.shortcuts" = "键盘快捷键";
+"settings.shortcuts.enable" = "启用键盘快捷键";
+"settings.shortcuts.caption" = "在弹出窗口处于活动状态时生效。";
+"settings.shortcuts.zoomIn" = "放大";
+"settings.shortcuts.zoomOut" = "缩小";
+"settings.shortcuts.zoomReset" = "重置缩放";
+"settings.shortcuts.back" = "后退";
+"settings.shortcuts.forward" = "前进";
+"settings.shortcuts.reload" = "重新加载";
+"settings.section.backup" = "备份与恢复";
+"settings.export" = "导出设置…";
+"settings.import" = "导入设置…";
+"settings.backup.caption" = "包含所有页面、自定义图标和语言偏好。";
+"settings.export.success" = "设置导出成功。";
+"settings.export.error" = "导出设置失败：%@";
+"settings.import.invalidFormat" = "所选文件不是有效的 PopPage 设置备份。";
+"settings.import.error" = "导入设置失败：%@";
+"settings.import.success" = "已导入 %d 个页面。";
+"settings.importAlert.title" = "确定导入设置？";
+"settings.importAlert.cancel" = "取消";
+"settings.importAlert.confirm" = "导入";
+"settings.importAlert.message" = "这将使用导入的 %2$d 个页面替换当前的 %1$d 个页面及设置。";
+"settings.section.about" = "关于";
+"settings.version" = "版本";

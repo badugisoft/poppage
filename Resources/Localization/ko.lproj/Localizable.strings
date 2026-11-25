@@ -1,0 +1,144 @@
+/* Main Menu */
+"menu.about" = "PopPage 정보";
+"menu.hide" = "PopPage 숨기기";
+"menu.quit" = "PopPage 종료";
+"menu.edit" = "편집";
+"menu.edit.undo" = "실행 취소";
+"menu.edit.redo" = "실행 복귀";
+"menu.edit.cut" = "잘라내기";
+"menu.edit.copy" = "복사";
+"menu.edit.paste" = "붙여넣기";
+"menu.edit.selectAll" = "전체 선택";
+"menu.window" = "윈도우";
+"menu.window.close" = "닫기";
+"menu.window.minimize" = "최소화";
+
+/* Status Bar Context Menu */
+"context.openInBrowser" = "브라우저에서 열기";
+"context.reload" = "새로고침";
+"context.managePages" = "페이지 관리…";
+"context.quit" = "PopPage 종료";
+
+/* Popover Toolbar Tooltips */
+"toolbar.back" = "뒤로";
+"toolbar.forward" = "앞으로";
+"toolbar.reload" = "새로고침";
+"toolbar.zoomOut" = "축소";
+"toolbar.zoomReset" = "기본 비율로 복원";
+"toolbar.zoomIn" = "확대";
+"toolbar.openInBrowser" = "기본 브라우저에서 열기";
+
+/* WebView Messages */
+"webview.invalidURL" = "유효한 URL을 설정하세요.";
+"webview.loadErrorTitle" = "페이지를 불러올 수 없습니다";
+
+/* Model Display Names */
+"page.defaultName" = "새 페이지";
+"iconType.favicon" = "파비콘";
+"iconType.text" = "텍스트";
+"iconType.image" = "이미지";
+"navigationPolicy.block" = "이동 안 함";
+"navigationPolicy.openExternal" = "외부 브라우저로 열기";
+"navigationPolicy.inPlace" = "현재 팝오버에서 이동";
+
+/* Manager Sidebar & Empty State */
+"manager.untitled" = "이름 없음";
+"manager.enableHelp" = "메뉴바에 표시";
+"manager.addHelp" = "새 페이지 추가";
+"manager.deleteHelp" = "선택한 페이지 삭제";
+"manager.settings" = "설정";
+"manager.emptyTitle" = "페이지를 선택하세요";
+"manager.emptyDescription" = "왼쪽 하단의 + 버튼으로 메뉴바에 등록할 웹사이트를 추가하세요.";
+
+/* Page Editor */
+"editor.section.general" = "기본 정보";
+"editor.name.label" = "이름";
+"editor.name.prompt" = "예: GitHub";
+"editor.url.label" = "URL";
+"editor.url.prompt" = "https://example.com";
+"editor.url.invalid" = "http:// 또는 https://로 시작하는 유효한 주소를 입력하세요.";
+"editor.enabled" = "메뉴바에 표시";
+
+"editor.section.icon" = "메뉴바 아이콘";
+"editor.icon.style" = "표시 방식";
+"editor.icon.preview" = "미리보기";
+"editor.icon.refreshFavicon" = "파비콘 새로고침";
+"editor.icon.textLabel" = "표시 텍스트";
+"editor.icon.textPrompt" = "비워두면 페이지 이름 표시";
+"editor.icon.chooseImage" = "이미지 선택…";
+"editor.icon.removeImage" = "제거";
+"editor.icon.template" = "템플릿 이미지 사용";
+"editor.icon.templateHelp" = "다크 모드에 맞춰 아이콘 색상을 자동 반전합니다.";
+
+"editor.section.popover" = "팝오버 창";
+"editor.closeOnFocusLoss" = "포커스를 잃으면 자동으로 닫기";
+"editor.animated" = "열기/닫기 애니메이션";
+"editor.defaultWidth" = "기본 너비";
+"editor.defaultHeight" = "기본 높이";
+"editor.unit.pt" = "pt";
+"editor.size.captionOverlay" = "툴바를 포함한 전체 크기입니다.";
+"editor.size.captionContent" = "툴바를 제외한 웹페이지 영역 크기입니다.";
+"editor.resizable" = "크기 조절 허용";
+"editor.rememberSize" = "변경한 크기 유지";
+"editor.savedSize" = "저장된 크기: %d × %d";
+"editor.reset" = "초기화";
+"editor.defaultZoom" = "기본 확대 비율";
+"editor.rememberZoom" = "변경한 비율 유지";
+"editor.savedZoom" = "저장된 비율: %d%%";
+
+"editor.section.navigation" = "링크 및 이동";
+"editor.allowNewWindows" = "새 창 링크를 외부 브라우저로 열기";
+"editor.navigationPolicy" = "페이지 이동";
+
+"editor.section.headers" = "HTTP 헤더";
+"editor.headers.namePrompt" = "헤더 이름";
+"editor.headers.valuePrompt" = "값";
+"editor.headers.removeHelp" = "헤더 삭제";
+"editor.headers.add" = "헤더 추가";
+"editor.headers.caption" = "이 페이지의 HTTP/HTTPS 요청 시 전송됩니다. 변경 사항은 다음 로드 또는 새로고침부터 적용됩니다.";
+
+"editor.section.toolbar" = "하단 툴바";
+"editor.toolbar.overlay" = "웹페이지 위에 오버레이";
+"editor.toolbar.opacity" = "배경 불투명도";
+"editor.toolbar.backForward" = "뒤로/앞으로 버튼";
+"editor.toolbar.reload" = "새로고침 버튼";
+"editor.toolbar.zoom" = "확대/축소 버튼";
+
+"editor.openPopover" = "팝오버 열기";
+"editor.deletePage" = "페이지 삭제";
+"editor.deleteAlert.title" = "페이지를 삭제할까요?";
+"editor.deleteAlert.cancel" = "취소";
+"editor.deleteAlert.confirm" = "삭제";
+"editor.deleteAlert.message" = "'%@' 설정과 저장된 아이콘이 함께 삭제됩니다.";
+
+/* App Settings */
+"settings.section.general" = "일반";
+"settings.launchAtLogin" = "로그인 시 자동으로 시작";
+"settings.requiresApproval" = "시스템 설정 > 일반 > 로그인 항목에서 승인이 필요합니다.";
+"settings.launchAtLoginError" = "로그인 시 시작 설정을 변경할 수 없습니다: %@";
+"settings.language" = "언어";
+"settings.language.system" = "시스템 기본";
+"settings.section.shortcuts" = "키보드 단축키";
+"settings.shortcuts.enable" = "키보드 단축키 사용";
+"settings.shortcuts.caption" = "팝오버 창이 활성화된 상태에서 동작합니다.";
+"settings.shortcuts.zoomIn" = "확대";
+"settings.shortcuts.zoomOut" = "축소";
+"settings.shortcuts.zoomReset" = "기본 비율로 복원";
+"settings.shortcuts.back" = "뒤로";
+"settings.shortcuts.forward" = "앞으로";
+"settings.shortcuts.reload" = "새로고침";
+"settings.section.backup" = "백업 및 복원";
+"settings.export" = "설정 내보내기…";
+"settings.import" = "설정 가져오기…";
+"settings.backup.caption" = "모든 페이지, 커스텀 아이콘 및 언어 설정이 포함됩니다.";
+"settings.export.success" = "설정을 내보냈습니다.";
+"settings.export.error" = "설정을 내보내지 못했습니다: %@";
+"settings.import.invalidFormat" = "올바른 PopPage 설정 백업 파일이 아닙니다.";
+"settings.import.error" = "설정을 가져오지 못했습니다: %@";
+"settings.import.success" = "%d개의 페이지를 가져왔습니다.";
+"settings.importAlert.title" = "설정을 가져올까요?";
+"settings.importAlert.cancel" = "취소";
+"settings.importAlert.confirm" = "가져오기";
+"settings.importAlert.message" = "현재 %d개의 페이지와 설정이 가져온 %d개의 페이지로 대체됩니다.";
+"settings.section.about" = "정보";
+"settings.version" = "버전";

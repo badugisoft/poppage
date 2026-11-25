@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:poppage}",
+      "name": "Debug PopPage",
+      "target": "PopPage",
+      "configuration": "debug",
+      "preLaunchTask": "swift: Build Debug PopPage"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:poppage}",
+      "name": "Release PopPage",
+      "target": "PopPage",
+      "configuration": "release",
+      "preLaunchTask": "swift: Build Release PopPage"
+    }
+  ]
+}
