@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-26
+
 ### Fixed
 - Fixed an issue where a transient popover (`closeOnFocusLoss`) stopped closing on focus loss or outside clicks after interacting with an HTML `<select>` dropdown inside the page
 
@@ -25,5 +27,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 8 localizations: English, Korean, Simplified Chinese, Japanese, Spanish, German, French, and Klingon
 - Signed & notarized macOS `.dmg` and `.zip` release packaging
 
-[Unreleased]: https://github.com/badugisoft/poppage/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/badugisoft/poppage/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/badugisoft/poppage/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/badugisoft/poppage/releases/tag/v0.1.0
