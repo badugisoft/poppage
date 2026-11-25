@@ -18,6 +18,13 @@ final class PageStatusItem: NSObject, NSPopoverDelegate {
     private var lastFaviconURLString: String?
     private var lastCloseDate: Date?
     private var cachedFavicon: NSImage?
+    private var isTrackingMenu = false
+
+    private nonisolated(unsafe) var resignActiveObserver: NSObjectProtocol?
+    private nonisolated(unsafe) var menuBeginTrackingObserver: NSObjectProtocol?
+    private nonisolated(unsafe) var menuEndTrackingObserver: NSObjectProtocol?
+    private nonisolated(unsafe) var globalMouseDownMonitor: Any?
+    private nonisolated(unsafe) var localMouseDownMonitor: Any?
 
     var onWillOpen: ((UUID) -> Void)?
     var onOpenManager: (() -> Void)?
@@ -26,6 +33,10 @@ final class PageStatusItem: NSObject, NSPopoverDelegate {
 
     var isPopoverShown: Bool {
         popover.isShown
+    }
+
+    deinit {
+        removeFocusLossMonitors()
     }
 
     init(page: PageItem) {
@@ -89,6 +100,13 @@ final class PageStatusItem: NSObject, NSPopoverDelegate {
 
         popover.animates = page.animated
         popover.behavior = page.closeOnFocusLoss ? .transient : .applicationDefined
+        if popover.isShown {
+            if page.closeOnFocusLoss {
+                startFocusLossMonitoring()
+            } else {
+                stopFocusLossMonitoring()
+            }
+        }
         if !popover.isShown || overlayChanged {
             popover.contentSize = contentSize(for: page)
         }
@@ -289,12 +307,159 @@ final class PageStatusItem: NSObject, NSPopoverDelegate {
         NSApp.terminate(nil)
     }
 
+    func popoverDidShow(_ notification: Notification) {
+        startFocusLossMonitoring()
+    }
+
     func popoverDidClose(_ notification: Notification) {
+        stopFocusLossMonitoring()
         lastCloseDate = Date()
     }
 
     func invalidate() {
+        stopFocusLossMonitoring()
         popover.close()
         NSStatusBar.system.removeStatusItem(statusItem)
+    }
+
+    // AppKit's .transient NSPopover monitoring can stop firing after WKWebView opens
+    // a native NSMenu (e.g. HTML <select>), so we track focus loss explicitly.
+    private func startFocusLossMonitoring() {
+        stopFocusLossMonitoring()
+        guard page.closeOnFocusLoss else { return }
+
+        resignActiveObserver = NotificationCenter.default.addObserver(
+            forName: NSApplication.didResignActiveNotification,
+            object: NSApp,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in
+                self?.handleFocusLoss()
+            }
+        }
+
+        menuBeginTrackingObserver = NotificationCenter.default.addObserver(
+            forName: NSMenu.didBeginTrackingNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in
+                self?.isTrackingMenu = true
+            }
+        }
+
+        menuEndTrackingObserver = NotificationCenter.default.addObserver(
+            forName: NSMenu.didEndTrackingNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in
+                guard let self else { return }
+                self.isTrackingMenu = false
+                self.restorePopoverKeyWindowIfNeeded()
+            }
+        }
+
+        globalMouseDownMonitor = NSEvent.addGlobalMonitorForEvents(
+            matching: [.leftMouseDown, .rightMouseDown, .otherMouseDown]
+        ) { [weak self] _ in
+            Task { @MainActor in
+                self?.handleGlobalMouseDown()
+            }
+        }
+
+        localMouseDownMonitor = NSEvent.addLocalMonitorForEvents(
+            matching: [.leftMouseDown, .rightMouseDown, .otherMouseDown]
+        ) { [weak self] event in
+            MainActor.assumeIsolated {
+                self?.handleLocalMouseDown(event)
+            }
+            return event
+        }
+    }
+
+    private func stopFocusLossMonitoring() {
+        isTrackingMenu = false
+        removeFocusLossMonitors()
+    }
+
+    private nonisolated func removeFocusLossMonitors() {
+        if let resignActiveObserver {
+            NotificationCenter.default.removeObserver(resignActiveObserver)
+            self.resignActiveObserver = nil
+        }
+        if let menuBeginTrackingObserver {
+            NotificationCenter.default.removeObserver(menuBeginTrackingObserver)
+            self.menuBeginTrackingObserver = nil
+        }
+        if let menuEndTrackingObserver {
+            NotificationCenter.default.removeObserver(menuEndTrackingObserver)
+            self.menuEndTrackingObserver = nil
+        }
+        if let globalMouseDownMonitor {
+            NSEvent.removeMonitor(globalMouseDownMonitor)
+            self.globalMouseDownMonitor = nil
+        }
+        if let localMouseDownMonitor {
+            NSEvent.removeMonitor(localMouseDownMonitor)
+            self.localMouseDownMonitor = nil
+        }
+    }
+
+    private func handleFocusLoss() {
+        guard page.closeOnFocusLoss,
+              popover.isShown,
+              contentVC.view.window?.attachedSheet == nil else {
+            return
+        }
+        closePopover()
+    }
+
+    private func handleGlobalMouseDown() {
+        guard page.closeOnFocusLoss,
+              popover.isShown,
+              !isTrackingMenu,
+              let popoverWindow = contentVC.view.window,
+              popoverWindow.attachedSheet == nil else {
+            return
+        }
+        if popoverWindow.frame.contains(NSEvent.mouseLocation) {
+            return
+        }
+        closePopover()
+    }
+
+    private func handleLocalMouseDown(_ event: NSEvent) {
+        guard page.closeOnFocusLoss,
+              popover.isShown,
+              !isTrackingMenu,
+              let popoverWindow = contentVC.view.window,
+              popoverWindow.attachedSheet == nil else {
+            return
+        }
+        if let targetWindow = event.window {
+            if targetWindow === popoverWindow
+                || targetWindow.parent === popoverWindow
+                || (popoverWindow.childWindows?.contains(where: { $0 === targetWindow }) ?? false)
+                || targetWindow.level == .popUpMenu {
+                return
+            }
+        }
+        if popoverWindow.frame.contains(NSEvent.mouseLocation) {
+            return
+        }
+        closePopover()
+    }
+
+    private func restorePopoverKeyWindowIfNeeded() {
+        guard popover.isShown,
+              NSApp.isActive,
+              let popoverWindow = contentVC.view.window,
+              popoverWindow.attachedSheet == nil,
+              !popoverWindow.isKeyWindow,
+              NSApp.keyWindow == nil else {
+            return
+        }
+        popoverWindow.makeKey()
     }
 }

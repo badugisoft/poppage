@@ -26,6 +26,7 @@
 - **Navigation Policy Scope**: `navigationPolicy` applies only to user-triggered main-frame navigations (`.linkActivated`, `.formSubmitted`); initial loads, redirects, back/forward, and reloads are always allowed.
 - **Custom HTTP Headers**: Applied via `makeURLRequest(for:)`, main-frame GET interception in `WebViewCoordinator` (with single-shot `pendingHeaderInjectionURL` guard), `webView.customUserAgent` override, and same-host requests in `FaviconFetcher`.
 - **Preventing `.transient` Popover Reopen**: `popoverDidClose` records the close timestamp and ignores reopens within `0.3s`.
+- **Transient Focus-Loss Monitoring**: When `closeOnFocusLoss` is enabled, `PageStatusItem` supplements `.transient` `NSPopover` behavior with explicit `didResignActiveNotification` and global/local mouse-down monitors (paused during `NSMenu` tracking and restoring key-window status afterward) so HTML `<select>` popups do not break auto-close.
 - **Bottom Toolbar Background**: Observes `themeColor` → `underPageBackgroundColor` via KVO and sets `.aqua`/`.darkAqua` from sRGB luminance. `toolbarOverlayOpacity` controls background alpha when `toolbarOverlay` is enabled.
 - **Default vs. Saved (`saved*`) Size & Zoom**: `width`/`height`/`defaultZoom` hold defaults; user-modified values live in `savedWidth`/`savedHeight`/`savedZoom`. When `toolbarOverlay` is `false`, `31pt` is added for the toolbar.
 - **Editor `.id(selectedID)`**: `ManagerView` attaches `.id(selectedID)` to `PageEditorView` so switching pages does not trigger `.onChange` and clear `saved*` values.

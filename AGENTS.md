@@ -17,5 +17,6 @@ PopPage is a Swift menu bar app for macOS 14+ (`Package.swift`, `swift-tools-ver
 ## Conventions & Rules
 
 - **Build & Lint**: Run `make lint && make build` before committing code or resource changes.
+- **Install & Launch After Edits**: After modifying application code or resources, always run `make install && open /Applications/PopPage.app` so the updated app is installed and running for immediate testing.
 - **Language**: Write all developer-facing docs (`AGENTS.md`, `docs/ARCHITECTURE.md`) and code comments in English; keep `en` as the default app/doc language.
 - **Docs Sync**: Always update `README.md`, `docs/README.*.md`, `CHANGELOG.md` (`[Unreleased]`), `AGENTS.md`, and `docs/ARCHITECTURE.md` when features, fixes, or structure change.

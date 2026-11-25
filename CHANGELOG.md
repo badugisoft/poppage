@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Fixed an issue where a transient popover (`closeOnFocusLoss`) stopped closing on focus loss or outside clicks after interacting with an HTML `<select>` dropdown inside the page
+
 ## [0.1.0] - 2026-11-25
 
 ### Added
