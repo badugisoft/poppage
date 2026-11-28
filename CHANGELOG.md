@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-28
+
+### Added
+- Selective website data clearing (Cookies, Storage, Cache) per page in Page Editor and across all pages in App Settings
+
 ## [0.1.1] - 2026-11-26
 
 ### Fixed
@@ -27,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 8 localizations: English, Korean, Simplified Chinese, Japanese, Spanish, German, French, and Klingon
 - Signed & notarized macOS `.dmg` and `.zip` release packaging
 
-[Unreleased]: https://github.com/badugisoft/poppage/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/badugisoft/poppage/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/badugisoft/poppage/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/badugisoft/poppage/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/badugisoft/poppage/releases/tag/v0.1.0
