@@ -142,3 +142,22 @@
 "settings.importAlert.message" = "현재 %d개의 페이지와 설정이 가져온 %d개의 페이지로 대체됩니다.";
 "settings.section.about" = "정보";
 "settings.version" = "버전";
+
+"websiteData.cookies" = "쿠키";
+"websiteData.storage" = "스토리지";
+"websiteData.cache" = "캐시";
+"websiteData.cleared" = "선택한 웹 사이트 데이터를 삭제했습니다.";
+"editor.section.websiteData" = "웹 사이트 데이터";
+"editor.websiteData.clear" = "웹 사이트 데이터 삭제…";
+"editor.websiteData.caption" = "이 페이지 도메인의 선택한 데이터를 삭제하고 새로고침합니다. 같은 도메인을 공유하는 다른 페이지에도 영향을 줄 수 있습니다.";
+"editor.websiteData.alert.title" = "웹 사이트 데이터를 삭제할까요?";
+"editor.websiteData.alert.cancel" = "취소";
+"editor.websiteData.alert.confirm" = "삭제";
+"editor.websiteData.alert.message" = "'%@'의 선택한 웹 사이트 데이터를 삭제하고 페이지를 새로고침합니다.";
+"settings.section.websiteData" = "웹 사이트 데이터";
+"settings.websiteData.clearAll" = "전체 웹 사이트 데이터 삭제…";
+"settings.websiteData.caption" = "모든 페이지에서 선택한 쿠키, 스토리지 또는 캐시를 삭제하고 새로고침합니다.";
+"settings.websiteData.alert.title" = "전체 웹 사이트 데이터를 삭제할까요?";
+"settings.websiteData.alert.cancel" = "취소";
+"settings.websiteData.alert.confirm" = "전체 삭제";
+"settings.websiteData.alert.message" = "모든 페이지의 선택한 웹 사이트 데이터를 삭제하고 열려 있는 페이지를 새로고침합니다.";

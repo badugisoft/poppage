@@ -13,12 +13,13 @@
   - `LaunchAtLogin.swift`: Login item registration via `SMAppService.mainApp`.
   - `L10n.swift`: Runtime `.lproj` bundle resolution (`LocalizationManager`) and `.appLanguageDidChange` notifications.
   - `SettingsTransfer.swift`: JSON `SettingsBackup` export/import (pages, base64 custom icons, language) with `lastPathComponent` filename sanitization.
+  - `WebsiteDataService.swift`: Selective `WKWebsiteDataStore.default()` cleanup for Cookies, Storage, and Cache (per-domain host matching or global reset).
 - `Sources/PopPage/StatusBar/`:
   - `StatusBarManager.swift`, `PageStatusItem.swift`: `NSStatusItem` and `NSPopover` lifecycle.
 - `Sources/PopPage/Popover/`:
   - `PopoverContentViewController.swift`, `WebViewCoordinator.swift`: Bottom toolbar (standard/overlay), `WKWebView`, resize grip, navigation/new-window policies, and local keyboard shortcuts.
 - `Sources/PopPage/UI/`:
-  - `ManagerView.swift`, `PageEditorView.swift`, `AppSettingsView.swift`, `IconPreview.swift`: Management sidebar, page editor, and Settings tab.
+  - `ManagerView.swift`, `PageEditorView.swift`, `AppSettingsView.swift`, `IconPreview.swift`, `WebsiteDataSelectionToggles.swift`: Management sidebar, page editor, and Settings tab.
 
 ## Key Implementation Notes
 

@@ -11,6 +11,10 @@ struct PageEditorView: View {
     @State private var previewRefreshID = UUID()
     @State private var showDeleteConfirm = false
     @State private var showShortcutsPopover = false
+    @State private var dataSelection = WebsiteDataSelection()
+    @State private var showClearDataConfirm = false
+    @State private var isClearingData = false
+    @State private var dataClearMessage: String?
     @FocusState private var isURLFieldFocused: Bool
 
     var body: some View {
@@ -283,6 +287,33 @@ struct PageEditorView: View {
                 Toggle(L10n.tr("editor.toolbar.zoom", default: "Zoom Buttons"), isOn: $page.showZoomButtons)
             }
 
+            Section(L10n.tr("editor.section.websiteData", default: "Website Data")) {
+                WebsiteDataSelectionToggles(selection: $dataSelection)
+
+                HStack {
+                    Button(L10n.tr("editor.websiteData.clear", default: "Clear Website Data…"), role: .destructive) {
+                        showClearDataConfirm = true
+                    }
+                    .disabled(dataSelection.isEmpty || page.normalizedURL == nil || isClearingData)
+
+                    if isClearingData {
+                        ProgressView()
+                            .controlSize(.small)
+                    }
+                    Spacer()
+                }
+
+                Text(L10n.tr("editor.websiteData.caption", default: "Clears selected data for this page's domain and reloads it. Shared domains may affect other pages."))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
+                if let dataClearMessage {
+                    Text(dataClearMessage)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
             Section {
                 HStack {
                     Button(L10n.tr("editor.openPopover", default: "Open Popover")) {
@@ -326,6 +357,15 @@ struct PageEditorView: View {
         } message: {
             Text(L10n.format("editor.deleteAlert.message", default: "Settings and saved icon for '%@' will be deleted.", page.name))
         }
+        .alert(L10n.tr("editor.websiteData.alert.title", default: "Clear Website Data?"), isPresented: $showClearDataConfirm) {
+            Button(L10n.tr("editor.websiteData.alert.cancel", default: "Cancel"), role: .cancel) {}
+            Button(L10n.tr("editor.websiteData.alert.confirm", default: "Clear"), role: .destructive) {
+                clearWebsiteData()
+            }
+        } message: {
+            let target = page.normalizedURL?.host ?? page.name
+            Text(L10n.format("editor.websiteData.alert.message", default: "Selected website data for '%@' will be deleted and the page will reload.", target))
+        }
     }
 
     @ViewBuilder
@@ -360,6 +400,20 @@ struct PageEditorView: View {
             StatusBarManager.shared.refreshFavicon(for: pageID)
             previewRefreshID = UUID()
             isFetchingFavicon = false
+        }
+    }
+
+    private func clearWebsiteData() {
+        guard let url = page.normalizedURL, !dataSelection.isEmpty else { return }
+        isClearingData = true
+        dataClearMessage = nil
+        let selection = dataSelection
+        let pageID = page.id
+        Task {
+            await WebsiteDataService.clearData(for: url, selection: selection)
+            StatusBarManager.shared.reload(for: pageID)
+            isClearingData = false
+            dataClearMessage = L10n.tr("websiteData.cleared", default: "Selected website data cleared.")
         }
     }
 

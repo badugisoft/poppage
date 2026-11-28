@@ -289,7 +289,7 @@ final class PageStatusItem: NSObject, NSPopoverDelegate {
         }
     }
 
-    @objc private func menuReload() {
+    func reload() {
         if let url = webView.url ?? page.normalizedURL,
            let scheme = url.scheme?.lowercased(),
            scheme == "http" || scheme == "https" {
@@ -297,6 +297,10 @@ final class PageStatusItem: NSObject, NSPopoverDelegate {
         } else {
             webView.reload()
         }
+    }
+
+    @objc private func menuReload() {
+        reload()
     }
 
     @objc private func menuOpenManager() {

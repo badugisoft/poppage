@@ -41,6 +41,7 @@ Diese App wurde **zu 100 % mit Antigravity entwickelt**.
   - Links für neue Fenster (`target="_blank"` usw.) im Standardbrowser öffnen
   - Seitennavigation konfigurieren (`Nicht navigieren` / `Im externen Browser öffnen` / `Im Popover navigieren`)
 - **Benutzerdefinierte HTTP-Header**: HTTP/HTTPS-Anfrage-Header pro Seite (einschließlich `User-Agent`) hinzufügen, umschalten und entfernen
+- **Website-Datenverwaltung**: Cookies, Speicher oder Cache selektiv pro Seite (nach Domain) oder für alle Seiten in den Einstellungen löschen
 - **Popover-Größe & Größenänderung**: Standardbreite/-höhe festlegen, unten rechts per Griff anpassen und geänderte Größen optional merken
 - **Zoom-Steuerung**: Standardzoom pro Seite festlegen und geänderten Zoom optional merken
 - **Tastaturkurzbefehle**: Pro Seite umschaltbare Popover-Kurzbefehle mit kompakter Kurzbefehl-Übersicht neben dem Schalter

@@ -74,6 +74,16 @@ final class StatusBarManager: ObservableObject {
         items[pageID]?.refreshFavicon()
     }
 
+    func reload(for pageID: UUID) {
+        items[pageID]?.reload()
+    }
+
+    func reloadAll() {
+        for item in items.values {
+            item.reload()
+        }
+    }
+
     private func updatePageSize(id: UUID, size: NSSize) {
         guard let store, var page = store.page(for: id) else { return }
         let w = Double(round(size.width))

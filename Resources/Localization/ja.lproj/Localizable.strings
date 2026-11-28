@@ -142,3 +142,22 @@
 "settings.importAlert.message" = "現在の %d 件のページと設定が、読み込んだ %d 件のページに置き換わります。";
 "settings.section.about" = "情報";
 "settings.version" = "バージョン";
+
+"websiteData.cookies" = "Cookie";
+"websiteData.storage" = "ストレージ";
+"websiteData.cache" = "キャッシュ";
+"websiteData.cleared" = "選択した Web サイトデータを消去しました。";
+"editor.section.websiteData" = "Web サイトデータ";
+"editor.websiteData.clear" = "Web サイトデータを消去…";
+"editor.websiteData.caption" = "このページのドメインの選択したデータを消去して再読み込みします。同じドメインを共有する他のページにも影響する場合があります。";
+"editor.websiteData.alert.title" = "Web サイトデータを消去しますか？";
+"editor.websiteData.alert.cancel" = "キャンセル";
+"editor.websiteData.alert.confirm" = "消去";
+"editor.websiteData.alert.message" = "「%@」の選択した Web サイトデータを削除してページを再読み込みします。";
+"settings.section.websiteData" = "Web サイトデータ";
+"settings.websiteData.clearAll" = "すべての Web サイトデータを消去…";
+"settings.websiteData.caption" = "すべてのページで選択した Cookie、ストレージ、またはキャッシュを消去して再読み込みします。";
+"settings.websiteData.alert.title" = "すべての Web サイトデータを消去しますか？";
+"settings.websiteData.alert.cancel" = "キャンセル";
+"settings.websiteData.alert.confirm" = "すべて消去";
+"settings.websiteData.alert.message" = "すべてのページの選択した Web サイトデータを削除し、開いているページを再読み込みします。";

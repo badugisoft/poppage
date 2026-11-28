@@ -41,6 +41,7 @@ This app was **built 100% with Antigravity**.
   - Open new window links (`target="_blank"`, etc.) in the default external browser
   - Configure page navigation behavior (`Do Not Navigate` / `Open in External Browser` / `Navigate in Popover`)
 - **Custom HTTP Headers**: Add, toggle, and remove per-page HTTP/HTTPS request headers (including `User-Agent`)
+- **Website Data Management**: Selectively clear Cookies, Storage, or Cache per page (by domain) or across all pages from Settings
 - **Popover Size & Resizing**: Set default width/height, resize via the bottom-right grip, and optionally remember modified sizes
 - **Zoom Controls**: Set a default zoom level per page and optionally remember modified zoom levels
 - **Keyboard Shortcuts**: Toggleable per-page popover shortcuts with a compact shortcut reference popover next to the toggle

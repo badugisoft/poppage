@@ -41,6 +41,7 @@ janvam **100% Antigravity lo'ta'bogh chenmoHlu'**.
   - Qorwagh chu' rarwI' (`target="_blank"`, etc.) Hur motlh navwI'Daq poSmoH
   - ghItlh vIH mIw wIv (`vIHQo'` / `Hur navwI'Daq poSmoH` / `naDev vIH`)
 - **HTTP Headers**: Hoch ghItlhDaq HTTP/HTTPS Headers (`User-Agent` ngaSbogh) chel, chu'/chu'Ha', teq
+- **web De' SeH**: Hoch DaqDaq pagh SeHlawDaq Cookies, ngevwI', qawHaq joq wIvtaHvIS Qaw'
 - **Popover tIn & choH**: motlh juch/'ab cher, bIng nIHDaq tIn choH, 'ej choHta'bogh tIn qaw
 - **tIn mIw SeH**: Hoch ghItlhDaq motlh tIn mIw cher, 'ej choHta'bogh tIn mIw qaw
 - **leQ tIn**: Hoch ghItlhDaq lo'laH 'ej `i` leQ 'uyDI' De' mach 'ang

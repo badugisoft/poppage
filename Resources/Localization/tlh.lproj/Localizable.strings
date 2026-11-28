@@ -142,3 +142,22 @@
 "settings.importAlert.message" = "DaH %d ghItlh SeHlaw je %d qemta'bogh ghItlh choH.";
 "settings.section.about" = "De'";
 "settings.version" = "mI'";
+
+"websiteData.cookies" = "Cookies";
+"websiteData.storage" = "ngevwI'";
+"websiteData.cache" = "qawHaq";
+"websiteData.cleared" = "wIvlu'pu'bogh web De' Qaw'lu'pu'.";
+"editor.section.websiteData" = "web De'";
+"editor.websiteData.clear" = "web De' Qaw'…";
+"editor.websiteData.caption" = "Daqvam web De' wIvlu'pu'bogh Qaw' 'ej rarqa'.";
+"editor.websiteData.alert.title" = "web De' Qaw''a'?";
+"editor.websiteData.alert.cancel" = "qIl";
+"editor.websiteData.alert.confirm" = "Qaw'";
+"editor.websiteData.alert.message" = "'%@' web De' wIvlu'pu'bogh Qaw'lu' 'ej rarqa'lu'.";
+"settings.section.websiteData" = "web De'";
+"settings.websiteData.clearAll" = "Hoch web De' Qaw'…";
+"settings.websiteData.caption" = "Hoch DaqmeyDaq Cookies, ngevwI', qawHaq joq wIvlu'pu'bogh Qaw' 'ej rarqa'.";
+"settings.websiteData.alert.title" = "Hoch web De' Qaw''a'?";
+"settings.websiteData.alert.cancel" = "qIl";
+"settings.websiteData.alert.confirm" = "Hoch Qaw'";
+"settings.websiteData.alert.message" = "Hoch DaqmeyDaq web De' wIvlu'pu'bogh Qaw'lu' 'ej Daqmey poS rarqa'lu'.";

@@ -142,3 +142,22 @@
 "settings.importAlert.message" = "Cela remplacera vos %d page(s) et réglages actuels par %d page(s) importée(s).";
 "settings.section.about" = "À propos";
 "settings.version" = "Version";
+
+"websiteData.cookies" = "Cookies";
+"websiteData.storage" = "Stockage";
+"websiteData.cache" = "Cache";
+"websiteData.cleared" = "Les données de site web sélectionnées ont été effacées.";
+"editor.section.websiteData" = "Données de site web";
+"editor.websiteData.clear" = "Effacer les données de site web…";
+"editor.websiteData.caption" = "Efface les données sélectionnées pour le domaine de cette page et la recharge. Les domaines partagés peuvent affecter d'autres pages.";
+"editor.websiteData.alert.title" = "Effacer les données de site web ?";
+"editor.websiteData.alert.cancel" = "Annuler";
+"editor.websiteData.alert.confirm" = "Effacer";
+"editor.websiteData.alert.message" = "Les données de site web sélectionnées pour « %@ » seront supprimées et la page sera rechargée.";
+"settings.section.websiteData" = "Données de site web";
+"settings.websiteData.clearAll" = "Effacer toutes les données de site web…";
+"settings.websiteData.caption" = "Efface les cookies, le stockage ou le cache sélectionnés sur toutes les pages et les recharge.";
+"settings.websiteData.alert.title" = "Effacer toutes les données de site web ?";
+"settings.websiteData.alert.cancel" = "Annuler";
+"settings.websiteData.alert.confirm" = "Tout effacer";
+"settings.websiteData.alert.message" = "Les données de site web sélectionnées sur toutes les pages seront supprimées et les pages ouvertes seront rechargées.";

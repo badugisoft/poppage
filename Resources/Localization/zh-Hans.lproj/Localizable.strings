@@ -142,3 +142,22 @@
 "settings.importAlert.message" = "这将使用导入的 %2$d 个页面替换当前的 %1$d 个页面及设置。";
 "settings.section.about" = "关于";
 "settings.version" = "版本";
+
+"websiteData.cookies" = "Cookie";
+"websiteData.storage" = "存储";
+"websiteData.cache" = "缓存";
+"websiteData.cleared" = "已清除所选网站数据。";
+"editor.section.websiteData" = "网站数据";
+"editor.websiteData.clear" = "清除网站数据…";
+"editor.websiteData.caption" = "清除此页面所在域名的所选数据并重新加载。共享同一域名的其他页面也可能会受影响。";
+"editor.websiteData.alert.title" = "清除网站数据？";
+"editor.websiteData.alert.cancel" = "取消";
+"editor.websiteData.alert.confirm" = "清除";
+"editor.websiteData.alert.message" = "将删除“%@”的所选网站数据并重新加载页面。";
+"settings.section.websiteData" = "网站数据";
+"settings.websiteData.clearAll" = "清除所有网站数据…";
+"settings.websiteData.caption" = "清除所有页面中所选的 Cookie、存储或缓存并重新加载。";
+"settings.websiteData.alert.title" = "清除所有网站数据？";
+"settings.websiteData.alert.cancel" = "取消";
+"settings.websiteData.alert.confirm" = "全部清除";
+"settings.websiteData.alert.message" = "将删除所有页面的所选网站数据并重新加载已打开的页面。";

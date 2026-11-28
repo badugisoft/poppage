@@ -41,6 +41,7 @@ Esta aplicación fue **creada al 100 % con Antigravity**.
   - Abre enlaces de nueva ventana (`target="_blank"`, etc.) en el navegador externo predeterminado
   - Configura el comportamiento de navegación (`No navegar` / `Abrir en navegador externo` / `Navegar en la ventana emergente`)
 - **Cabeceras HTTP personalizadas**: Añade, activa/desactiva y elimina cabeceras HTTP/HTTPS por página (incluido `User-Agent`)
+- **Gestión de datos del sitio web**: Borra selectivamente cookies, almacenamiento o caché por página (por dominio) o en todas las páginas desde Ajustes
 - **Tamaño y redimensionamiento**: Define ancho y alto predeterminados, cambia el tamaño desde la esquina inferior derecha y guarda opcionalmente el tamaño modificado
 - **Control de zoom**: Define un zoom predeterminado por página y recuerda opcionalmente el zoom ajustado
 - **Atajos de teclado**: Atajos activables por página con un popover compacto de referencia junto al interruptor

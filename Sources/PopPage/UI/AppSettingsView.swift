@@ -12,6 +12,10 @@ struct AppSettingsView: View {
     @State private var showImportConfirm = false
     @State private var transferMessage: String?
     @State private var transferIsError = false
+    @State private var dataSelection = WebsiteDataSelection()
+    @State private var showClearAllDataConfirm = false
+    @State private var isClearingData = false
+    @State private var dataClearMessage: String?
 
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.1.0"
@@ -66,6 +70,33 @@ struct AppSettingsView: View {
                 }
             }
 
+            Section(L10n.tr("settings.section.websiteData", default: "Website Data")) {
+                WebsiteDataSelectionToggles(selection: $dataSelection)
+
+                HStack {
+                    Button(L10n.tr("settings.websiteData.clearAll", default: "Clear All Website Data…"), role: .destructive) {
+                        showClearAllDataConfirm = true
+                    }
+                    .disabled(dataSelection.isEmpty || isClearingData)
+
+                    if isClearingData {
+                        ProgressView()
+                            .controlSize(.small)
+                    }
+                    Spacer()
+                }
+
+                Text(L10n.tr("settings.websiteData.caption", default: "Clears selected cookies, storage, or cache across all pages and reloads them."))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
+                if let dataClearMessage {
+                    Text(dataClearMessage)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
             Section(L10n.tr("settings.section.about", default: "About")) {
                 HStack(spacing: 12) {
                     if let icon = NSApp.applicationIconImage {
@@ -103,6 +134,27 @@ struct AppSettingsView: View {
         } message: {
             let count = pendingImportBackup?.pages.count ?? 0
             Text(L10n.format("settings.importAlert.message", default: "This will replace your current %d page(s) and settings with %d imported page(s).", PageStore.shared.pages.count, count))
+        }
+        .alert(L10n.tr("settings.websiteData.alert.title", default: "Clear All Website Data?"), isPresented: $showClearAllDataConfirm) {
+            Button(L10n.tr("settings.websiteData.alert.cancel", default: "Cancel"), role: .cancel) {}
+            Button(L10n.tr("settings.websiteData.alert.confirm", default: "Clear All"), role: .destructive) {
+                clearAllWebsiteData()
+            }
+        } message: {
+            Text(L10n.tr("settings.websiteData.alert.message", default: "Selected website data across all pages will be deleted and open pages will reload."))
+        }
+    }
+
+    private func clearAllWebsiteData() {
+        guard !dataSelection.isEmpty else { return }
+        isClearingData = true
+        dataClearMessage = nil
+        let selection = dataSelection
+        Task {
+            await WebsiteDataService.clearAll(selection: selection)
+            StatusBarManager.shared.reloadAll()
+            isClearingData = false
+            dataClearMessage = L10n.tr("websiteData.cleared", default: "Selected website data cleared.")
         }
     }
 

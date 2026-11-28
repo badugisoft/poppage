@@ -142,3 +142,22 @@
 "settings.importAlert.message" = "This will replace your current %d page(s) and settings with %d imported page(s).";
 "settings.section.about" = "About";
 "settings.version" = "Version";
+
+"websiteData.cookies" = "Cookies";
+"websiteData.storage" = "Storage";
+"websiteData.cache" = "Cache";
+"websiteData.cleared" = "Selected website data cleared.";
+"editor.section.websiteData" = "Website Data";
+"editor.websiteData.clear" = "Clear Website Data…";
+"editor.websiteData.caption" = "Clears selected data for this page's domain and reloads it. Shared domains may affect other pages.";
+"editor.websiteData.alert.title" = "Clear Website Data?";
+"editor.websiteData.alert.cancel" = "Cancel";
+"editor.websiteData.alert.confirm" = "Clear";
+"editor.websiteData.alert.message" = "Selected website data for '%@' will be deleted and the page will reload.";
+"settings.section.websiteData" = "Website Data";
+"settings.websiteData.clearAll" = "Clear All Website Data…";
+"settings.websiteData.caption" = "Clears selected cookies, storage, or cache across all pages and reloads them.";
+"settings.websiteData.alert.title" = "Clear All Website Data?";
+"settings.websiteData.alert.cancel" = "Cancel";
+"settings.websiteData.alert.confirm" = "Clear All";
+"settings.websiteData.alert.message" = "Selected website data across all pages will be deleted and open pages will reload.";

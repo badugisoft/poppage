@@ -142,3 +142,22 @@
 "settings.importAlert.message" = "Dadurch werden deine aktuellen %d Seite(n) und Einstellungen durch %d importierte Seite(n) ersetzt.";
 "settings.section.about" = "Über";
 "settings.version" = "Version";
+
+"websiteData.cookies" = "Cookies";
+"websiteData.storage" = "Speicher";
+"websiteData.cache" = "Cache";
+"websiteData.cleared" = "Ausgewählte Website-Daten wurden gelöscht.";
+"editor.section.websiteData" = "Website-Daten";
+"editor.websiteData.clear" = "Website-Daten löschen…";
+"editor.websiteData.caption" = "Löscht ausgewählte Daten für die Domain dieser Seite und lädt sie neu. Gemeinsame Domains können andere Seiten beeinflussen.";
+"editor.websiteData.alert.title" = "Website-Daten löschen?";
+"editor.websiteData.alert.cancel" = "Abbrechen";
+"editor.websiteData.alert.confirm" = "Löschen";
+"editor.websiteData.alert.message" = "Ausgewählte Website-Daten für „%@“ werden gelöscht und die Seite wird neu geladen.";
+"settings.section.websiteData" = "Website-Daten";
+"settings.websiteData.clearAll" = "Alle Website-Daten löschen…";
+"settings.websiteData.caption" = "Löscht ausgewählte Cookies, Speicher oder Cache für alle Seiten und lädt sie neu.";
+"settings.websiteData.alert.title" = "Alle Website-Daten löschen?";
+"settings.websiteData.alert.cancel" = "Abbrechen";
+"settings.websiteData.alert.confirm" = "Alle löschen";
+"settings.websiteData.alert.message" = "Ausgewählte Website-Daten für alle Seiten werden gelöscht und geöffnete Seiten werden neu geladen.";
